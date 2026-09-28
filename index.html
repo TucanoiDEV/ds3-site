@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Souls III — Chama Esvanecente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-aba="lore">
+
+  <!-- Fundos: um por aba, com transição suave entre eles -->
+  <div class="fundos" aria-hidden="true">
+    <div class="fundo fundo-lore"></div>
+    <div class="fundo fundo-itens"></div>
+    <div class="fundo fundo-web"></div>
+    <div class="fundo fundo-estrategias"></div>
+    <div class="vinheta"></div>
+    <div class="brasas" id="brasas"></div>
+  </div>
+
+  <header class="topo">
+    <div class="marca">
+      <span class="marca-sub">Dark Souls</span>
+      <span class="marca-titulo">III</span>
+    </div>
+
+    <nav class="abas" role="tablist">
+      <button class="aba ativa" role="tab" data-aba="lore" aria-selected="true">Lore</button>
+      <button class="aba" role="tab" data-aba="itens" aria-selected="false">Itens</button>
+      <button class="aba" role="tab" data-aba="web" aria-selected="false">Conteúdos da Web</button>
+      <button class="aba" role="tab" data-aba="estrategias" aria-selected="false">Estratégias</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== LORE ===================== -->
+    <section class="pagina ativa" id="lore" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">🔥</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo I</p>
+          <h1>A Era do Fogo se Apaga</h1>
+          <p class="perfil-citacao">"Sim, de fato. Chamam-no de Lothric, onde as terras transitórias dos Lordes das Cinzas convergem."</p>
+        </div>
+      </div>
+
+      <div class="grade">
+        <article class="cartao largo">
+          <h2>A Primeira Chama</h2>
+          <p>Na Era Antiga, o mundo era cinzento e sem forma, governado por dragões eternos. Então surgiu o Fogo, e com ele a disparidade: calor e frio, vida e morte, luz e escuridão. Das trevas vieram seres que encontraram as <strong>Almas de Lordes</strong> junto à chama — Gwyn, Nito, a Bruxa de Izalith e o Pigmeu Furtivo.</p>
+          <p>Gwyn derrotou os dragões e inaugurou a <strong>Era do Fogo</strong>. Mas as chamas começaram a esvanecer, e desde então, heróis têm se sacrificado para reacendê-las — um ciclo que se repetiu tantas vezes que o próprio mundo começou a se fundir e decair.</p>
+        </article>
+
+        <article class="cartao">
+          <h2>Os Lordes das Cinzas</h2>
+          <p>Aqueles que um dia vincularam a chama. Quando o sino toca, eles devem retornar de seus túmulos para cumprir seu dever — mas quase todos se recusam a voltar aos seus tronos.</p>
+          <ul class="lista">
+            <li><span>Vigias do Abismo</span> — a Legião de Farron</li>
+            <li><span>Aldrich</span> — o Devorador de Deuses</li>
+            <li><span>Yhorm</span> — o Gigante</li>
+            <li><span>Lothric & Lorian</span> — os príncipes gêmeos</li>
+          </ul>
+        </article>
+
+        <article class="cartao">
+          <h2>O Não-Acendido</h2>
+          <p>Você é um <strong>Unkindled</strong> — uma cinza que falhou em vincular a chama em sua vida passada. Rejeitado até pelo fogo, você desperta no Cemitério das Cinzas com uma única missão: levar os Lordes de volta aos seus tronos, vivos ou mortos.</p>
+        </article>
+
+        <article class="cartao">
+          <h2>A Guardiã do Fogo</h2>
+          <p>No Santuário do Elo do Fogo, a Guardiã transforma almas em força. Ela guarda um segredo: os olhos de uma Guardiã do Fogo podem enxergar um mundo onde o fogo já não existe — a chave para um dos finais do jogo.</p>
+        </article>
+
+        <article class="cartao">
+          <h2>A Pintura e a Cidade Anelada</h2>
+          <p>Nas DLCs <em>Ashes of Ariandel</em> e <em>The Ringed City</em>, o Unkindled viaja até o fim do mundo. Lá encontra o <strong>Sangue Escuro</strong> dos Pigmeus, pigmento suficiente para pintar um novo mundo — frio, escuro e gentil.</p>
+        </article>
+
+        <article class="cartao largo">
+          <h2>Os Finais</h2>
+          <div class="finais">
+            <div><h3>Vincular a Chama</h3><p>Sacrifique-se como os heróis antes de você e prolongue a Era do Fogo, mais uma vez.</p></div>
+            <div><h3>O Fim do Fogo</h3><p>Com a Guardiã, deixe a chama se apagar e dê início à Era das Trevas.</p></div>
+            <div><h3>Usurpação do Fogo</h3><p>Seguindo Yuria de Londor, torne-se o Senhor dos Esvaziados e governe os homens.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== ITENS ===================== -->
+    <section class="pagina" id="itens" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">⚔️</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo II</p>
+          <h1>Arsenal do Não-Acendido</h1>
+          <p class="perfil-citacao">"Cada lâmina carrega a alma de quem a empunhou."</p>
+        </div>
+      </div>
+
+      <!-- Catálogo completo: gerado por tools/gerar_itens.py e montado pelo script.js -->
+      <h2 class="secao-titulo" id="catalogo-completo">Catálogo completo</h2>
+      <p class="catalogo-fonte">Todos os itens do jogo, com nomes e descrições oficiais da versão brasileira. Os locais onde encontrar cada item vêm da <a href="https://darksouls.fandom.com/wiki/Dark_Souls_III" target="_blank" rel="noopener">Dark Souls Wiki</a> e estão em inglês. Clique num item para ver os detalhes.</p>
+
+      <div class="catalogo-controles">
+        <input type="search" id="busca-itens" class="busca" placeholder="Buscar pelo nome (português ou inglês)…" aria-label="Buscar item">
+        <div class="filtros" id="filtros-catalogo" role="group" aria-label="Filtrar catálogo"></div>
+      </div>
+      <p class="catalogo-contagem" id="contagem-itens" aria-live="polite">Carregando itens…</p>
+      <div class="catalogo" id="catalogo"></div>
+      <div id="catalogo-fim" aria-hidden="true"></div>
+
+      <dialog class="ficha-item" id="ficha-item" aria-labelledby="ficha-nome">
+        <button class="ficha-fechar" type="button" aria-label="Fechar">✕</button>
+        <div class="ficha-topo">
+          <img id="ficha-img" alt="">
+          <div>
+            <span class="tag" id="ficha-tag"></span>
+            <h3 id="ficha-nome"></h3>
+            <p class="ficha-nome-en" id="ficha-nome-en" lang="en"></p>
+          </div>
+        </div>
+        <p class="ficha-efeito" id="ficha-efeito"></p>
+        <dl class="ficha" id="ficha-stats"></dl>
+        <div class="ficha-desc" id="ficha-desc"></div>
+        <div class="local" id="ficha-onde"><span>📍 Onde encontrar <small>(em inglês)</small></span><ul lang="en"></ul></div>
+        <a class="wiki" id="ficha-wiki" target="_blank" rel="noopener">Ver página completa na wiki →</a>
+      </dialog>
+    </section>
+
+    <!-- ===================== WEB ===================== -->
+    <section class="pagina" id="web" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">📜</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo III</p>
+          <h1>Mensagens de Outros Mundos</h1>
+          <p class="perfil-citacao">"Tente pular... ah, espere."</p>
+        </div>
+      </div>
+
+      <div class="grade">
+        <a class="link-cartao" href="https://darksouls3.wiki.fextralife.com/" target="_blank" rel="noopener">
+          <span class="tag">Wiki</span>
+          <h3>Fextralife Wiki</h3>
+          <p>A enciclopédia mais completa: localização de itens, stats de armas, NPCs, chefes e rotas.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.youtube.com/@VaatiVidya" target="_blank" rel="noopener">
+          <span class="tag">YouTube</span>
+          <h3>VaatiVidya</h3>
+          <p>As famosas análises de lore em "Prepare to Cry". Obrigatório para entender a história escondida nos itens.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.reddit.com/r/darksouls3/" target="_blank" rel="noopener">
+          <span class="tag">Comunidade</span>
+          <h3>r/darksouls3</h3>
+          <p>Subreddit oficial da comunidade: dicas, builds, memes e pedidos de ajuda cooperativa.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.speedrun.com/ds3" target="_blank" rel="noopener">
+          <span class="tag">Speedrun</span>
+          <h3>Speedrun.com — DS3</h3>
+          <p>Rankings, categorias (Any%, All Bosses) e guias das rotas mais rápidas do mundo.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.nexusmods.com/darksouls3" target="_blank" rel="noopener">
+          <span class="tag">Mods</span>
+          <h3>Nexus Mods</h3>
+          <p>Mods de texturas, overhauls de gameplay e randomizadores de itens e inimigos.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://store.steampowered.com/app/374320/DARK_SOULS_III/" target="_blank" rel="noopener">
+          <span class="tag">Loja</span>
+          <h3>Dark Souls III na Steam</h3>
+          <p>Página oficial do jogo, com as DLCs, conquistas e avaliações da comunidade.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://mugenmonkey.com/darksouls3" target="_blank" rel="noopener">
+          <span class="tag">Ferramenta</span>
+          <h3>Mugenmonkey — Planejador de Build</h3>
+          <p>Monte sua build, calcule atributos e compartilhe com amigos antes de gastar suas almas.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.youtube.com/results?search_query=dark+souls+3+no+hit+run" target="_blank" rel="noopener">
+          <span class="tag">YouTube</span>
+          <h3>No-Hit Runs</h3>
+          <p>Veja jogadores terminando o jogo sem levar nenhum golpe — pura inspiração (e humilhação).</p>
+          <span class="seta">Visitar →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== ESTRATÉGIAS ===================== -->
+    <section class="pagina" id="estrategias" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">💀</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo IV</p>
+          <h1>Vencendo o Impossível</h1>
+          <p class="perfil-citacao">"Não se precipite. Paciência é a arma mais afiada."</p>
+        </div>
+      </div>
+
+      <h2 class="secao-titulo">Chefes</h2>
+      <div class="acordeao">
+        <details>
+          <summary><span>Iudex Gundyr</span><span class="dificuldade" data-nivel="1">Fácil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Cemitério das Cinzas</dd></div>
+              <div><dt>PV (NG)</dt><dd>1.037</dd></div>
+              <div><dt>Fraqueza</dt><dd>Fogo, Gelo, Raio</dd></div>
+              <div><dt>Resistência</dt><dd>Trevas, Sangramento</dd></div>
+            </dl>
+            <p>Circule para o lado direito dele com o escudo erguido e fique atento ao agarrão. Use as <strong>Bombas de Fogo</strong> do tutorial, principalmente na segunda fase. Quando a massa negra surgir, mantenha distância e puna após o salto com corte.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Iudex+Gundyr" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Vordt do Vale Boreal</span><span class="dificuldade" data-nivel="2">Médio</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Muralha Alta de Lothric</dd></div>
+              <div><dt>PV (NG)</dt><dd>1.328</dd></div>
+              <div><dt>Fraqueza</dt><dd>Trevas</dd></div>
+              <div><dt>Resistência</dt><dd>Físico (exceto impacto), Magia, Fogo, Raio</dd></div>
+            </dl>
+            <p>Fique embaixo e atrás dele na primeira fase. Na segunda, role na perpendicular às investidas e vá para trás dele durante o sopro de gelo. O <strong>Machado de Batalha das Profundezas</strong> (dano de trevas) é excelente aqui.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Vordt+of+the+Boreal+Valley" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Vigias do Abismo</span><span class="dificuldade" data-nivel="2">Médio</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Fortaleza de Farron</dd></div>
+              <div><dt>PV (NG)</dt><dd>1.584</dd></div>
+              <div><dt>Fraqueza</dt><dd>Raio, Sangramento</dd></div>
+              <div><dt>Resistência</dt><dd>Trevas, Veneno/Tóxico</dd></div>
+            </dl>
+            <p>Na primeira fase, o vigia de olhos vermelhos ataca os outros: aproveite a confusão. Na segunda (espada em chamas), mantenha distância e espere o fim dos combos. Ele cambaleia fácil e permite backstab após o combo de 3 golpes.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Abyss+Watchers" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Yhorm, o Gigante</span><span class="dificuldade" data-nivel="1">Fácil*</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Capital Profanada</dd></div>
+              <div><dt>PV (NG)</dt><dd>27.822</dd></div>
+              <div><dt>Fraqueza</dt><dd>Raio, Trevas</dd></div>
+              <div><dt>Resistência</dt><dd>Corte, Estocada</dd></div>
+            </dl>
+            <p>Pegue a <strong>Tempestuosa</strong> no fundo da arena e carregue a habilidade até brilhar em branco. Dá para segurar a carga e soltar no momento seguro. Com a missão de Siegward concluída, ele chega com outra Tempestuosa. <em>*Sem a Tempestuosa, é outra história.</em></p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Yhorm+the+Giant" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Pontífice Sulyvahn</span><span class="dificuldade" data-nivel="3">Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Irithyll do Vale Boreal</dd></div>
+              <div><dt>PV (NG)</dt><dd>5.106</dd></div>
+              <div><dt>Fraqueza</dt><dd>Estocada, Raio, Fogo</dd></div>
+              <div><dt>Resistência</dt><dd>Veneno, Tóxico, Gelo, Sangramento</dd></div>
+            </dl>
+            <p>Circule perto do lado esquerdo dele na primeira fase. Quando o clone aparecer, destrua-o rápido: ele antecipa o próximo ataque. Não seja ganancioso, um golpe costuma virar uma sequência. Aceita parry (menos agarrões, projéteis e saltos).</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Pontiff+Sulyvahn" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Dançarina do Vale Boreal</span><span class="dificuldade" data-nivel="3">Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Muralha Alta de Lothric</dd></div>
+              <div><dt>PV (NG)</dt><dd>5.111</dd></div>
+              <div><dt>Fraqueza</dt><dd>Trevas, Impacto, Raio</dd></div>
+              <div><dt>Resistência</dt><dd>Sangramento; imune a veneno e gelo</dd></div>
+            </dl>
+            <p>Role <strong>em direção</strong> a ela nos cortes largos e fique no flanco traseiro. Atenção à reverência de "cobra" antes do agarrão. Na segunda fase ela usa duas espadas: use os pilares e só ataque após combos longos.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Dancer+of+the+Boreal+Valley" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Rei Sem Nome</span><span class="dificuldade" data-nivel="4">Muito Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Pico do Arquidragão</dd></div>
+              <div><dt>PV (NG)</dt><dd>4.577 + 7.100</dd></div>
+              <div><dt>Fraqueza</dt><dd>F1: Raio, Gelo · F2: Fogo, Trevas</dd></div>
+              <div><dt>Resistência</dt><dd>F1: Fogo, Sangramento · F2: Raio, Gelo, Sangramento</dd></div>
+            </dl>
+            <p>Fase 1: trave a mira no cavaleiro e ataque a cabeça do dragão; nas patas o dano é mínimo. Fase 2: use carga leve/média para rolar bem. A estocada carregada na altura da cintura não se esquiva para o lado: role na diagonal.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Nameless+King" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Alma de Cinzas</span><span class="dificuldade" data-nivel="3">Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Forno da Primeira Chama</dd></div>
+              <div><dt>PV (NG)</dt><dd>6.557 + 4.209</dd></div>
+              <div><dt>Fraqueza</dt><dd>Raio, Trevas</dd></div>
+              <div><dt>Resistência</dt><dd>Fogo, Sangramento; imune a veneno</dd></div>
+            </dl>
+            <p>Na primeira fase seja agressivo para interromper as curas. Na segunda, fique a distância, espere o salto ou a estocada correndo e puna. Evite trocar golpes durante <em>Poder Interior</em> e o estilo de espada curva. Não aceita parry.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Soul+of+Cinder" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Irmã Friede</span><span class="dificuldade" data-nivel="4">Muito Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Capela de Ariandel (DLC)</dd></div>
+              <div><dt>PV (NG)</dt><dd>4.863 · 7.150 · 6.864</dd></div>
+              <div><dt>Fraqueza</dt><dd>Impacto (Friede); status (Ariandel)</dd></div>
+              <div><dt>Resistência</dt><dd>Magia e status (Friede)</dd></div>
+            </dl>
+            <p>Invoque <strong>Gael</strong>: ele facilita muito as fases 2 e 3. Quando ela ficar invisível, procure a névoa ou ouça os passos e vá até ela. Na fase 3 (Chama Negra), mantenha distância e ataque entre os combos. Aceita parry.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Sister+Friede" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Midir, Devorador da Escuridão</span><span class="dificuldade" data-nivel="4">Muito Difícil</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Cidade Anelada (DLC)</dd></div>
+              <div><dt>PV (NG)</dt><dd>15.860</dd></div>
+              <div><dt>Fraqueza</dt><dd>Estocada, Raio</dd></div>
+              <div><dt>Resistência</dt><dd>Trevas, Fogo, Magia; imune a status</dd></div>
+            </dl>
+            <p>Fique perto da cabeça: ele usa golpes corpo a corpo mais previsíveis. Raio e a magia <em>Névoa Pestilenta</em> funcionam muito bem. Evite invocar Shira, porque Midir passa a usar mais ataques à distância.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Darkeater+Midir" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Escravo Cavaleiro Gael</span><span class="dificuldade" data-nivel="5">Lendário</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Local</dt><dd>Descanso de Filianore (DLC)</dd></div>
+              <div><dt>PV (NG)</dt><dd>~10.037 + ~5.000 + restante</dd></div>
+              <div><dt>Fraqueza</dt><dd>Impacto, Gelo, Veneno</dd></div>
+              <div><dt>Resistência</dt><dd>Sangramento, Corte (trevas nas fases 2-3)</dd></div>
+            </dl>
+            <p>Fase 1: armas pesadas o fazem cambalear. Fases 2-3: role <strong>para frente</strong>, para o lado da espada; a capa acerta quem rola para trás. Na fase 3, os raios caem onde as almas pousaram: observe as marcas no chão. Não aceita parry.</p>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Slave+Knight+Gael+(Boss)" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+      </div>
+
+      <h2 class="secao-titulo">Desafios da Comunidade</h2>
+      <div class="grade">
+        <article class="cartao">
+          <h3>🔗 Nível de Alma 1 (SL1)</h3>
+          <p>Sem subir nenhum nível. Comece como <strong>Despossuído</strong> (a única classe de nível 1), use armas de baixo requisito (Adaga, Cimitarra, Espada Longa) e reforce-as ao máximo. Aprender parry é obrigatório.</p>
+        </article>
+        <article class="cartao">
+          <h3>🚫 No-Hit Run</h3>
+          <p>Terminar o jogo sem levar dano. Pratique cada chefe individualmente, use rotas fixas e evite inimigos opcionais.</p>
+        </article>
+        <article class="cartao">
+          <h3>🔥 Sem Estus</h3>
+          <p>Nenhuma cura por frasco. Aposte em milagres de cura, Anel da Vida e armaduras resistentes. Cada erro custa caro.</p>
+        </article>
+        <article class="cartao">
+          <h3>🛡️ Só Escudo (Pure Shield)</h3>
+          <p>Nada de armas: use apenas o escudo — golpes de escudo e muita paciência. O Grande Escudo de Havel é um clássico.</p>
+        </article>
+        <article class="cartao">
+          <h3>🎲 Randomizer</h3>
+          <p>Use o mod randomizer para embaralhar itens e inimigos. Cada partida é única — ótimo para quem já zerou várias vezes.</p>
+        </article>
+        <article class="cartao">
+          <h3>🔔 All Bosses</h3>
+          <p>Mate todos os 25 chefes (incluindo DLCs) em uma única jogada. Organize a ordem para evitar recorrer a rotas longas.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Locais e chefes: <a href="https://darksouls3.wiki.fextralife.com/Dark_Souls_3_Wiki" target="_blank" rel="noopener">Fextralife Wiki</a>.<br>
+    Catálogo completo de itens: atributos e locais da <a href="https://darksouls.fandom.com/wiki/Dark_Souls_III" target="_blank" rel="noopener">Dark Souls Wiki (Fandom)</a>, sob licença <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>, e ícones da mesma wiki; nomes e descrições em português são os textos oficiais do jogo, via <a href="https://github.com/mrexodia/DarkSouls3.TextViewer" target="_blank" rel="noopener">DarkSouls3.TextViewer</a>.<br>Site de fãs · Dark Souls III © FromSoftware / Bandai Namco. Não afiliado.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
