@@ -271,6 +271,11 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 3rem) 4
 }
 .cartao.largo { grid-column: 1 / -1; }
 
+/* Lore: os quatro cartões do meio ficam sempre alinhados (4, 2 ou 1 por linha) */
+.grade-lore { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1000px) { .grade-lore { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .grade-lore { grid-template-columns: 1fr; } }
+
 .cartao h2 { margin: 0 0 0.8rem; font-size: 1.3rem; color: var(--ouro-claro); }
 .cartao h3, .link-cartao h3 { margin: 0.4rem 0 0.6rem; font-size: 1.1rem; color: var(--ouro-claro); }
 .cartao p, .link-cartao p { margin: 0 0 0.8rem; }
