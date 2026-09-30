@@ -31,7 +31,9 @@
       <button class="aba ativa" role="tab" data-aba="lore" aria-selected="true">Lore</button>
       <button class="aba" role="tab" data-aba="itens" aria-selected="false">Itens</button>
       <button class="aba" role="tab" data-aba="web" aria-selected="false">Conteúdos da Web</button>
-      <button class="aba" role="tab" data-aba="estrategias" aria-selected="false">Estratégias</button>
+      <button class="aba" role="tab" data-aba="guias" aria-selected="false">Guias</button>
+      <button class="aba" role="tab" data-aba="chefes" aria-selected="false">Estratégias</button>
+      <button class="aba" role="tab" data-aba="estrategias" aria-selected="false">Desafios</button>
     </nav>
   </header>
 
@@ -49,13 +51,13 @@
       </div>
 
       <div class="grade grade-lore">
-        <article class="cartao largo">
+        <article data-historia="primeira-chama" tabindex="0" role="button" aria-haspopup="dialog" class="cartao largo">
           <h2>A Primeira Chama</h2>
           <p>Na Era Antiga, o mundo era cinzento e sem forma, governado por dragões eternos. Então surgiu o Fogo, e com ele a disparidade: calor e frio, vida e morte, luz e escuridão. Das trevas vieram seres que encontraram as <strong>Almas de Lordes</strong> junto à chama — Gwyn, Nito, a Bruxa de Izalith e o Pigmeu Furtivo.</p>
           <p>Gwyn derrotou os dragões e inaugurou a <strong>Era do Fogo</strong>. Mas as chamas começaram a esvanecer, e desde então, heróis têm se sacrificado para reacendê-las — um ciclo que se repetiu tantas vezes que o próprio mundo começou a se fundir e decair.</p>
         </article>
 
-        <article class="cartao">
+        <article data-historia="lordes" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h2>Os Lordes das Cinzas</h2>
           <p>Aqueles que um dia vincularam a chama. Quando o sino toca, eles devem retornar de seus túmulos para cumprir seu dever — mas quase todos se recusam a voltar aos seus tronos.</p>
           <ul class="lista">
@@ -66,22 +68,22 @@
           </ul>
         </article>
 
-        <article class="cartao">
+        <article data-historia="nao-acendido" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h2>O Não-Acendido</h2>
           <p>Você é um <strong>Unkindled</strong> — uma cinza que falhou em vincular a chama em sua vida passada. Rejeitado até pelo fogo, você desperta no Cemitério das Cinzas com uma única missão: levar os Lordes de volta aos seus tronos, vivos ou mortos.</p>
         </article>
 
-        <article class="cartao">
+        <article data-historia="guardia" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h2>A Guardiã do Fogo</h2>
           <p>No Santuário do Elo do Fogo, a Guardiã transforma almas em força. Ela guarda um segredo: os olhos de uma Guardiã do Fogo podem enxergar um mundo onde o fogo já não existe — a chave para um dos finais do jogo.</p>
         </article>
 
-        <article class="cartao">
+        <article data-historia="pintura" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h2>A Pintura e a Cidade Anelada</h2>
           <p>Nas DLCs <em>Ashes of Ariandel</em> e <em>The Ringed City</em>, o Unkindled viaja até o fim do mundo. Lá encontra o <strong>Sangue Escuro</strong> dos Pigmeus, pigmento suficiente para pintar um novo mundo — frio, escuro e gentil.</p>
         </article>
 
-        <article class="cartao largo">
+        <article data-historia="finais" tabindex="0" role="button" aria-haspopup="dialog" class="cartao largo">
           <h2>Os Finais</h2>
           <div class="finais">
             <div><h3>Vincular a Chama</h3><p>Sacrifique-se como os heróis antes de você e prolongue a Era do Fogo, mais uma vez.</p></div>
@@ -90,6 +92,73 @@
           </div>
         </article>
       </div>
+
+      <!-- Histórias completas: abertas ao clicar no card com o data-historia correspondente -->
+      <template id="historia-primeira-chama">
+        <h4>A Era dos Antigos</h4>
+        <p>No princípio, o mundo era cinzento e sem forma, coberto de névoa. Havia apenas penhascos de pedra, árvores gigantescas e os <strong>dragões eternos</strong>, seres imortais feitos de pedra que não conheciam a morte nem a mudança.</p>
+        <p>Então, sem que se saiba como, surgiu o <strong>Fogo</strong>. Com ele veio a <strong>disparidade</strong>: calor e frio, vida e morte, luz e escuridão. Pela primeira vez, as coisas passaram a ter um oposto.</p>
+        <h4>As Almas de Lordes</h4>
+        <p>Das profundezas da escuridão vieram seres que encontraram, junto à Primeira Chama, as <strong>Almas de Lordes</strong>. Gwyn, o Lorde da Luz Solar; Nito, o Primeiro dos Mortos; a Bruxa de Izalith e suas filhas do Caos. O quarto, o <strong>Pigmeu Furtivo</strong>, foi tão facilmente esquecido que ninguém percebeu o que ele tinha levado: a <strong>Alma Sombria</strong>, a origem da humanidade.</p>
+        <p>Com o poder dessas almas, os Lordes desafiaram os dragões. Os relâmpagos de Gwyn despedaçaram suas escamas, as tempestades de fogo da Bruxa os consumiram, Nito espalhou miasma de morte, e Seath, o Sem Escamas, traiu sua própria espécie. Os dragões caíram, e começou a <strong>Era do Fogo</strong>.</p>
+        <h4>O Fogo que se Apaga</h4>
+        <p>Mas o Fogo não é eterno. À medida que a chama enfraquecia, a <strong>Marca Sombria</strong> passou a surgir entre os humanos, condenando-os a renascer como Mortos-Vivos. Temendo o fim de sua era, Gwyn ofereceu a si mesmo como combustível e <strong>vinculou a Primeira Chama</strong>, tornando-se o primeiro Lorde das Cinzas.</p>
+        <p>Desde então, o ciclo se repete. O Morto-Vivo Escolhido, o Portador da Maldição e incontáveis heróis sem nome seguiram os passos de Gwyn, cada um prolongando a Era do Fogo por mais um tempo. A cada vínculo a chama volta mais fraca, e o mundo, cansado, começa a se fundir sobre si mesmo. Reinos distantes convergem em <strong>Lothric</strong>, e o tempo já não segue em linha reta.</p>
+        <p>No fim do jogo, a <strong>Alma das Cinzas</strong> guarda a Primeira Chama. Ela é a soma de todos os que um dia a vincularam, e em seus últimos golpes ainda ecoa o estilo de luta do próprio Gwyn.</p>
+      </template>
+
+      <template id="historia-lordes">
+        <p>Um Lorde das Cinzas é alguém que vinculou a Primeira Chama e virou cinza no processo. Quando o fogo volta a enfraquecer, o <strong>sino</strong> de Lothric toca e os Lordes despertam de seus túmulos para oferecer suas cinzas mais uma vez. Dessa vez, porém, quase todos se recusam. Só <strong>Ludleth de Courland</strong>, o menor deles, aguarda sentado em seu trono no Santuário do Elo do Fogo.</p>
+        <h4>Vigias do Abismo</h4>
+        <p>A <strong>Legião de Farron</strong> foi fundada por guerreiros que compartilhavam o sangue de lobo de Artorias, o Andarilho do Abismo. Eles juraram caçar o Abismo onde quer que ele surgisse e, juntos, vincularam a chama como um só Lorde. Depois da Fortaleza de Farron, eles se enfrentam ao mesmo tempo que enfrentam você: alguns deles foram corrompidos pelo próprio Abismo que juraram combater. Quando caem, um espírito sombrio ergue-se para lutar até o fim.</p>
+        <h4>Aldrich, o Devorador de Deuses</h4>
+        <p>Aldrich era um clérigo que começou a <strong>devorar pessoas</strong> e, de tanto comer, virou uma massa disforme e pegajosa. Ele sonhava com uma <strong>Era das Profundezas</strong>, um mar escuro sem fogo. Apesar da sua natureza monstruosa, a força da sua alma o tornou um Lorde das Cinzas. Ao despertar, ele não voltou para o trono: foi para Anor Londo e, com a ajuda do Pontífice Sulyvahn, <strong>devorou Gwyndolin</strong>, o Sol Sombrio, filho de Gwyn. É lá que você o enfrenta, ainda assumindo a forma do deus que consumiu.</p>
+        <h4>Yhorm, o Gigante</h4>
+        <p>Descendente do antigo conquistador da <strong>Capital Profanada</strong>, Yhorm foi um governante amado pelo seu povo, algo raro entre gigantes. Ele vinculou a chama para conter as chamas profanadas que tomaram a cidade. Sabendo que um dia poderia se tornar uma ameaça, confiou ao seu amigo <strong>Siegward de Catarina</strong> a <em>Storm Ruler</em>, a espada capaz de matá-lo. Na luta, Siegward aparece para cumprir a promessa ao lado do amigo que precisa abater.</p>
+        <h4>Lothric e Lorian</h4>
+        <p>O príncipe <strong>Lothric</strong> foi criado desde o nascimento com um único propósito: vincular a chama. Mas ele se recusou, preferindo assistir de seu trono ao fim da Era do Fogo. O irmão mais velho, <strong>Lorian</strong>, foi um guerreiro temido que caçou demônios até ser amaldiçoado. Ele voltou mudo e sem o uso das pernas, e a maldição de Lothric consome o pouco de força que lhe resta. Os dois são inseparáveis: quando Lorian cai, Lothric o <strong>revive</strong>, e na segunda fase o irmão mais velho carrega o mais novo nas costas.</p>
+      </template>
+
+      <template id="historia-nao-acendido">
+        <p>Nem todos os que tentaram vincular a chama conseguiram. Alguns heróis caíram antes, e suas cinzas foram consideradas indignas até pelo fogo. Esses são os <strong>Não-Acendidos</strong> (<em>Unkindled</em>): cinzas que nunca chegaram a arder.</p>
+        <p>Quando o sino toca e os Lordes se recusam a voltar, os Não-Acendidos despertam dos túmulos anônimos do <strong>Cemitério das Cinzas</strong>. Você é um deles, o <strong>Cinzento</strong> (<em>Ashen One</em>). Logo ao acordar, encontra <strong>Iudex Gundyr</strong>, o juiz que testa se a cinza é digna de seguir adiante, com uma espada espiralada cravada no peito.</p>
+        <h4>A Missão</h4>
+        <p>No Santuário do Elo do Fogo, a Guardiã do Fogo explica o dever: encontrar os Lordes das Cinzas que abandonaram seus tronos e trazer de volta suas <strong>cinzas</strong>, tirando-as de corpos vivos, se for preciso. Só assim a Primeira Chama poderá ser vinculada mais uma vez.</p>
+        <p>Você não é o único. Outros Não-Acendidos cruzam o seu caminho: <strong>Hawkwood</strong>, um desertor da Legião de Farron que já desistiu da missão; <strong>Anri de Astora</strong> e seu companheiro silencioso <strong>Horace</strong>, que caçam Aldrich; e muitos que caíram sem deixar nome.</p>
+        <h4>Os Caminhos Escondidos</h4>
+        <p>Nada obriga o Cinzento a obedecer. <strong>Yoel de Londor</strong> se oferece para servi-lo e, a cada morte, desperta nele a <strong>força dos Esvaziados</strong>. É o primeiro passo de um destino bem diferente, guiado pela misteriosa Yuria. E, nos confins do mundo, é possível encontrar coisas que nem os deuses queriam que fossem vistas.</p>
+      </template>
+
+      <template id="historia-guardia">
+        <p>Em todas as eras houve <strong>Guardiãs do Fogo</strong>, mulheres que dedicam a vida a cuidar das fogueiras e dos que lutam para vincular a chama. A Guardiã do Santuário do Elo do Fogo usa uma máscara que cobre seus olhos e fala sempre com calma e devoção ao Cinzento.</p>
+        <h4>Almas em Força</h4>
+        <p>É ela quem transforma as <strong>almas</strong> que você coleta em força, ou seja, é com ela que você sobe de nível. Ao lado dela, a <strong>Criada do Santuário</strong> vende itens e guarda os que você encontra pelo caminho.</p>
+        <h4>Os Olhos da Guardiã</h4>
+        <p>Existe algo que as Guardiãs nunca devem ter: <strong>olhos</strong>. Diz-se que os olhos de uma Guardiã do Fogo enxergam um mundo <strong>sem fogo</strong>, onde a chama já se apagou. Por isso eles sempre foram tirados delas, para que ninguém ousasse desejar esse mundo.</p>
+        <p>Nos confins de Lothric está o <strong>Cemitério Abandonado</strong> (<em>Untended Graves</em>), uma versão sombria e esquecida do Cemitério das Cinzas. Lá você encontra os <strong>Olhos de uma Guardiã do Fogo</strong>. Se entregá-los a ela, ela verá a escuridão pela primeira vez e entenderá que existe outro caminho.</p>
+        <p>No fim do jogo, se você a chamar diante da Primeira Chama, ela toma o fogo nas próprias mãos e o deixa se apagar, dando início ao final <strong>O Fim do Fogo</strong>.</p>
+      </template>
+
+      <template id="historia-pintura">
+        <h4>Ashes of Ariandel</h4>
+        <p>Um velho pedaço de tela leva o Cinzento para o <strong>Mundo Pintado de Ariandel</strong>, um lugar gelado onde a tinta está <strong>apodrecendo</strong>. Quem o chama é <strong>Gael</strong>, o Cavaleiro Escravo, que busca uma cinza forte o bastante para ver a Chama e ajudar uma jovem <strong>pintora</strong> a criar um mundo novo.</p>
+        <p>O problema é que um mundo pintado só pode renascer se for <strong>queimado</strong>. A <strong>Irmã Friede</strong>, uma ex-Não-Acendida que encontrou paz no frio, e o gigantesco <strong>Pai Ariandel</strong> fazem de tudo para impedir o fogo, preferindo deixar o mundo lentamente se desfazer. Derrotá-los permite acender a chama, e a pintora pede um último ingrediente: o pigmento para pintar o novo mundo.</p>
+        <h4>The Ringed City</h4>
+        <p>Gael parte em busca desse pigmento: o <strong>Sangue Escuro</strong>, a Alma Sombria herdada pelos Pigmeus. A jornada leva ao <strong>Monte de Detritos</strong> (<em>Dreg Heap</em>), onde todos os reinos que convergiram acabaram empilhados, e daí à <strong>Cidade Anelada</strong>, construída por Gwyn para os Pigmeus no fim do mundo e escondida sob uma ilusão guardada pela sua filha, <strong>Filianore</strong>.</p>
+        <p>No caminho estão alguns dos maiores inimigos do jogo: os Demônios Príncipes, <strong>Midir, o Devorador de Trevas</strong>, um dragão criado pelos deuses para caçar o Abismo, e <strong>Halflight, a Lança da Igreja</strong>. Ao tocar em Filianore, o tempo avança de uma vez: a ilusão se desfaz e a cidade surge em ruínas, coberta de cinzas.</p>
+        <h4>O Fim do Mundo</h4>
+        <p>Lá, Gael já devorou o Sangue Escuro dos Lordes Pigmeus, e o poder o enlouqueceu. Na última luta, sob um céu vermelho, você o enfrenta e recupera o sangue. De volta a Ariandel, a pintora recebe o pigmento e promete pintar um mundo <strong>frio, escuro e gentil</strong>. Quando terminar, ela vai dar a ele o seu nome.</p>
+      </template>
+
+      <template id="historia-finais">
+        <h4>Vincular a Chama</h4>
+        <p>O final mais tradicional. Depois de derrotar a Alma das Cinzas, você toca a Primeira Chama e se oferece como combustível, como Gwyn e tantos outros antes de você. A chama volta a arder, mas mais fraca do que nunca. É um ciclo sem fim, e cada vez mais triste.</p>
+        <h4>O Fim do Fogo</h4>
+        <p>Exige entregar os <strong>Olhos da Guardiã</strong> a ela. Diante da Primeira Chama, use o sinal dela para chamá-la. Ela toma a última brasa nas mãos e deixa o fogo se apagar. Na escuridão, ajoelhada, ela diz que um dia pequenas chamas vão dançar no escuro, como as brasas dos Lordes que se foram. Há uma variação sombria: se você a atacar nesse momento, é o Cinzento quem toma a brasa para si, em um mundo onde nada mais resta.</p>
+        <h4>Usurpação do Fogo</h4>
+        <p>O final secreto, ligado à misteriosa <strong>Londor</strong>, terra dos Esvaziados. Você precisa aceitar a Marca Sombria de Yoel, seguir <strong>Yuria de Londor</strong> e ajudar Anri na cerimônia de casamento em Anor Londo. Ao tocar na chama, o Cinzento não se sacrifica: ele a <strong>toma para si</strong> e se torna o <strong>Senhor dos Esvaziados</strong>. Assim começa a era dos homens, que deixa de depender do fogo dos deuses.</p>
+      </template>
+
     </section>
 
     <!-- ===================== ITENS ===================== -->
@@ -144,6 +213,11 @@
         </div>
       </div>
 
+      <h2 class="secao-titulo">Mensagens recentes</h2>
+      <p class="publicacoes-info" id="publicacoes-info">Carregando…</p>
+      <ul class="publicacoes" id="publicacoes"></ul>
+
+      <h2 class="secao-titulo">Pedras de invocação</h2>
       <div class="grade">
         <a class="link-cartao" href="https://darksouls3.wiki.fextralife.com/" target="_blank" rel="noopener">
           <span class="tag">Wiki</span>
@@ -163,7 +237,7 @@
           <p>Subreddit oficial da comunidade: dicas, builds, memes e pedidos de ajuda cooperativa.</p>
           <span class="seta">Visitar →</span>
         </a>
-        <a class="link-cartao" href="https://www.speedrun.com/ds3" target="_blank" rel="noopener">
+        <a class="link-cartao" href="https://www.speedrun.com/darksouls3" target="_blank" rel="noopener">
           <span class="tag">Speedrun</span>
           <h3>Speedrun.com — DS3</h3>
           <p>Rankings, categorias (Any%, All Bosses) e guias das rotas mais rápidas do mundo.</p>
@@ -181,6 +255,13 @@
           <p>Página oficial do jogo, com as DLCs, conquistas e avaliações da comunidade.</p>
           <span class="seta">Visitar →</span>
         </a>
+        <a class="link-cartao" href="https://store.steampowered.com/news/app/374320" target="_blank" rel="noopener">
+          <span class="tag">Notícias</span>
+          <h3>Notícias da Steam</h3>
+          <p>Patches oficiais e matérias da imprensa sobre Dark Souls III, reunidas pela Steam.</p>
+          <p class="cartao-recente" id="recente-steam" lang="en" hidden></p>
+          <span class="seta">Visitar →</span>
+        </a>
         <a class="link-cartao" href="https://mugenmonkey.com/darksouls3" target="_blank" rel="noopener">
           <span class="tag">Ferramenta</span>
           <h3>Mugenmonkey — Planejador de Build</h3>
@@ -196,13 +277,325 @@
       </div>
     </section>
 
-    <!-- ===================== ESTRATÉGIAS ===================== -->
-    <section class="pagina" id="estrategias" role="tabpanel">
+    <!-- ===================== GUIAS ===================== -->
+    <section class="pagina" id="guias" role="tabpanel">
       <div class="perfil">
-        <div class="perfil-emblema">💀</div>
+        <div class="perfil-emblema">🗝️</div>
         <div>
           <p class="perfil-rotulo">Capítulo IV</p>
-          <h1>Vencendo o Impossível</h1>
+          <h1>Destinos Entrelaçados</h1>
+          <p class="perfil-citacao">"Cada alma que você encontra carrega uma história inacabada."</p>
+        </div>
+      </div>
+
+      <h2 class="secao-titulo">Missões de NPCs</h2>
+      <div class="acordeao">
+        <details>
+          <summary><span>Siegward de Catarina</span><span class="dificuldade missao">Aliado</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Assentamento dos Mortos-Vivos</dd></div>
+              <div><dt>Recompensa</dt><dd>Conjunto de Catarina, Storm Ruler, Escudo Perfurante</dd></div>
+              <div><dt>Cuidado</dt><dd>Não entre na Masmorra de Irithyll antes de falar com ele na cozinha</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Depois de passar por Eygon, fale com Siegward no <strong>elevador</strong> da torre e de novo na plataforma. Ajude-o a matar o <strong>Demônio de Fogo</strong> e brinde com ele: ganha <em>Siegbräu</em> e os gestos Brindar e Dormir.</li>
+              <li><strong>Catedral das Profundezas:</strong> abra as portas azuis perto do Quarto de Rosaria e recarregue a área. Siegward estará no poço, fora da fogueira da Capela Purificadora. Compre o <strong>Conjunto de Catarina</strong> de Patches e devolva a ele.</li>
+              <li><strong>Irithyll:</strong> encontre-o na cozinha, perto da lareira, pelo esgoto próximo à fogueira da Mansão Distante. Recompensa: milagre <em>Emissão de Força</em> e mais Siegbräu.</li>
+              <li><strong>Masmorra de Irithyll:</strong> pegue a <strong>Chave da Cela Velha</strong> e abra a cela dele, perto do fosso com o gigante adormecido.</li>
+              <li><strong>Capital Profanada:</strong> ele entra na luta contra <strong>Yhorm</strong> ao seu lado. Depois da vitória, fale com ele sem descansar: ele morre e deixa o conjunto, a Storm Ruler e o Escudo Perfurante.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Siegward+of+Catarina" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Anri de Astora</span><span class="dificuldade missao">Aliado</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Estrada dos Sacrifícios (Fortaleza no Meio do Caminho)</dd></div>
+              <div><dt>Recompensa</dt><dd>Anel do Olho Maligno, Espada Reta de Anri</dd></div>
+              <div><dt>Cuidado</dt><dd>Não conte a Anri onde Horace está se ele ainda estiver vivo</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Fale com Anri e Horace na fogueira <strong>Fortaleza no Meio do Caminho</strong>.</li>
+              <li>Depois dos <strong>Diáconos das Profundezas</strong>, Anri aparece no Santuário, perto do trono de Aldrich.</li>
+              <li><strong>Catacumbas de Carthus:</strong> fale com Anri em dois pontos, primeiro antes da bola de esqueleto rolante e depois no caminho de pedras à direita da ponte de madeira. Pular um deles quebra a missão.</li>
+              <li><strong>Lago Latente:</strong> encontre e mate <strong>Horace</strong>, seguindo a parede direita depois do Demônio de Fogo. Volte e conte a Anri: ganha o <em>Anel do Olho Maligno</em>.</li>
+              <li><strong>Igreja de Yorshka:</strong> fale duas vezes com Anri. Um peregrino disfarçado de estátua está no canto. <strong>Mate-o antes do Pontífice</strong> para salvar Anri. Se estiver fazendo o final de Yuria, deixe-o vivo.</li>
+              <li><strong>Anor Londo:</strong> invoque Anri contra <strong>Aldrich</strong>. Depois da luta, Ludleth entrega a <em>Espada Reta de Anri</em>.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Anri+of+Astora" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Yuria de Londor</span><span class="dificuldade missao">Final</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Assentamento dos Mortos-Vivos (Yoel)</dd></div>
+              <div><dt>Recompensa</dt><dd>Final Usurpação do Fogo</dd></div>
+              <div><dt>Cuidado</dt><dd>Nunca cure a Marca Sombria nem salve Anri do peregrino</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Recrute <strong>Yoel de Londor</strong> perto da fogueira Pé da Muralha Alta. Ele passa a morar no Santuário.</li>
+              <li>Peça a Yoel para "despertar sua força" <strong>cinco vezes</strong>, antes de chegar às Catacumbas de Carthus. Cada vez você ganha uma <strong>Marca Sombria</strong>. Morrer aumenta o Esvaziamento e libera novos pedidos.</li>
+              <li>Quando Yoel morre, <strong>Yuria</strong> toma o lugar dele e reconhece você como futuro Senhor dos Esvaziados.</li>
+              <li>Siga a missão de <strong>Anri</strong> até a Igreja de Yorshka, mas <strong>não mate o peregrino</strong> escondido no canto.</li>
+              <li>Depois do <strong>Pontífice Sulyvahn</strong>, fale com Yuria. Ela indica o Templo da Lua Negra em Anor Londo, atrás da parede ilusória na base do elevador giratório.</li>
+              <li>No templo, aceite a cerimônia com o peregrino e use a espada no corpo de Anri. Você recebe mais Marcas Sombrias.</li>
+              <li>Derrote a <strong>Alma de Cinzas</strong> e interaja com a chama para ver o final <strong>Usurpação do Fogo</strong>.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Yuria+of+Londor" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Sirris dos Reinos sem Sol</span><span class="dificuldade missao">Aliado</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Santuário do Elo do Fogo</dd></div>
+              <div><dt>Recompensa</dt><dd>Anel do Gato Prateado, Conjunto e Escudo do Ocaso, Talismã sem Sol</dd></div>
+              <div><dt>Cuidado</dt><dd>Não entre no pacto dos Dedos de Rosaria antes de ajudá-la contra Creighton</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Depois de conhecer Anri e Horace, Sirris aparece no <strong>Santuário</strong>.</li>
+              <li>Entregue as <strong>Cinzas do Caçador de Sonhos</strong> à Criada do Santuário e fale com Sirris: ganha o gesto Lealdade à Lua Negra.</li>
+              <li><strong>Irithyll:</strong> acenda a fogueira Irithyll Central e use o sinal dela na ponte para derrotar <strong>Creighton, o Errante</strong>. Recompensa: <em>Anel do Gato Prateado</em>.</li>
+              <li>Depois de <strong>Aldrich</strong>, use o sinal dela perto do Poço dos Esvaziados e ajude-a contra o avô, <strong>Hodrick</strong>. O <em>Conjunto do Ocaso</em> fica perto da fogueira, e o <em>Escudo do Ocaso</em> no túmulo dele.</li>
+              <li>Volte ao Santuário e aceite o juramento dela. Se recusar, ela se torna Esvaziada.</li>
+              <li>Derrote os <strong>Príncipes Gêmeos</strong>, com ou sem a ajuda dela, e pegue o <em>Talismã sem Sol</em> no túmulo do avô.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Sirris+of+the+Sunless+Realms" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Patches, o Inquebrável</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Catedral das Profundezas</dd></div>
+              <div><dt>Recompensa</dt><dd>Loja no Santuário, gesto Prostração, resgate de Greirat</dd></div>
+              <div><dt>Cuidado</dt><dd>Não acenda a fogueira do Quarto de Rosaria antes da armadilha da ponte</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Fale com Siegward depois do Demônio de Fogo e recarregue a área. Na Catedral das Profundezas, Patches finge ser Siegward nas vigas e derruba você da ponte.</li>
+              <li>Sobreviva aos gigantes e fale com ele do outro lado, perto da escada do Quarto de Rosaria. Se recusar o perdão, ganha o gesto Prostração e uma Moeda Enferrujada.</li>
+              <li>No Santuário, suba a torre com a <strong>Chave da Torre</strong>. Patches tranca você lá. Saia e fale com ele.</li>
+              <li>Ele abre loja no andar de cima do Santuário, onde vende o Conjunto de Catarina e a Adaga de Aparar.</li>
+              <li>Quando Greirat for para Irithyll, conte a Patches aonde ele foi. Patches o resgata, a menos que você tenha comprado o Conjunto de Catarina.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Unbreakable+Patches" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Greirat do Assentamento</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Muralha Alta de Lothric</dd></div>
+              <div><dt>Recompensa</dt><dd>Anel da Lágrima Azul, loja com itens raros</dd></div>
+              <div><dt>Cuidado</dt><dd>A terceira viagem, ao Castelo de Lothric, sempre o mata</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Pegue a <strong>Chave da Cela</strong> na oficina abaixo do Pus of Man e liberte Greirat perto da fogueira Torre na Muralha.</li>
+              <li>No Assentamento dos Mortos-Vivos, pegue o <strong>Osso de Loretta</strong> no corpo pendurado na varanda do primeiro prédio e entregue a ele: ganha o <em>Anel da Lágrima Azul</em>.</li>
+              <li>Mande-o saquear o Assentamento. Ele volta depois de você derrotar qualquer chefe, com mais itens à venda.</li>
+              <li>Depois de chegar a Irithyll, mande-o saquear lá. Para mantê-lo vivo, conte a Patches aonde ele foi ou deixe Siegward na cozinha de Irithyll e não passe do Pontífice.</li>
+              <li>Se aceitar a última viagem, ao Castelo de Lothric, ele morre. As cinzas dele ficam no telhado dos Grandes Arquivos.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Greirat+of+the+Undead+Settlement" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Orbeck de Vinheim</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Estrada dos Sacrifícios</dd></div>
+              <div><dt>Recompensa</dt><dd>Feitiçarias, Anel do Dragão Jovem, Anel do Dragão Adormecido</dd></div>
+              <div><dt>Cuidado</dt><dd>Entregue um pergaminho antes de derrotar seis chefes, ou ele vai embora</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Fale com ele no segundo andar do prédio antes do Sábio de Cristal. Precisa de <strong>10 de Inteligência</strong>, e o Anel do Estudioso ajuda.</li>
+              <li>Ele se muda para o Santuário e vende feitiçarias.</li>
+              <li>Traga pergaminhos: do <strong>Sábio</strong>, <strong>Dourado</strong>, de <strong>Logan</strong> e de <strong>Cristal</strong>.</li>
+              <li>Compre três feitiçarias e entregue um pergaminho: ganha o <em>Anel do Dragão Jovem</em>.</li>
+              <li>Compre Espada Relâmpago de Farron, Névoa Pestilenta, Chamariz Auditivo e Susto: ganha o <em>Anel do Dragão Adormecido</em>.</li>
+              <li>Compre todas as feitiçarias. Ele deixa o Santuário e pode ser invocado contra <strong>Lothric, o Príncipe Mais Novo</strong>.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Orbeck+of+Vinheim" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Irina de Carim</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Assentamento dos Mortos-Vivos</dd></div>
+              <div><dt>Recompensa</dt><dd>Milagres; ela vira Guardiã do Fogo</dd></div>
+              <div><dt>Cuidado</dt><dd>Comprar um único milagre sombrio muda a missão de vez</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Encontre a cela dela: desça pela fenda à esquerda de Eygon ou use a <strong>Chave do Túmulo</strong> na porta do esgoto perto da fogueira Sob o Penhasco.</li>
+              <li>Aceite servi-la. Ela vai para o Santuário, no corredor do lado leste.</li>
+              <li>Entregue os tomos em braille de <strong>Carim</strong> e de <strong>Lothric</strong>. Os de <strong>Londor</strong> e das <strong>Profundezas</strong> destravam milagres sombrios.</li>
+              <li><strong>Caminho da luz:</strong> compre todos os milagres sem comprar nenhum sombrio. Ela vira Guardiã do Fogo na torre fora do Santuário.</li>
+              <li><strong>Caminho sombrio:</strong> ao comprar um milagre sombrio, Eygon a leva embora. Ele aparece hostil depois da fogueira de Iudex Gundyr e perde a invocação dele nas lutas.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Irina+of+Carim" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Cornyx do Grande Pântano</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Assentamento dos Mortos-Vivos</dd></div>
+              <div><dt>Recompensa</dt><dd>Chama de Piromancia e piromancias</dd></div>
+              <div><dt>Cuidado</dt><dd>Tomos de Quelana e do Guardião do Túmulo são só para Karla</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Ele está numa gaiola no alto do prédio com os mortos-vivos que jogam bombas. Desça da ponte perto da fogueira Sob o Penhasco e suba até a varanda.</li>
+              <li>Aceite aprender piromancia. Ele vai para o Santuário, na escada abaixo de Andre, e dá a <em>Chama de Piromancia</em>.</li>
+              <li>Entregue o <strong>Tomo do Grande Pântano</strong>: Orbe de Fogo, Bola de Fogo Explosiva, Névoa Venenosa e Suor Abundante.</li>
+              <li>Entregue o <strong>Tomo de Carthus</strong>: Surto Ácido, Farol de Carthus e Arco de Chamas de Carthus.</li>
+              <li>Entregue o <strong>Tomo de Izalith</strong>: Grande Orbe de Fogo do Caos e Tempestade do Caos.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Cornyx+of+the+Great+Swamp" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Hawkwood, o Desertor</span><span class="dificuldade missao">Duelo</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Santuário do Elo do Fogo</dd></div>
+              <div><dt>Recompensa</dt><dd>Joia Pesada, Anel de Farron, Pedra da Cabeça do Dragão Cintilante</dd></div>
+              <div><dt>Cuidado</dt><dd>Se perder o duelo, ele leva a sua pedra</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Fale com ele sentado no Santuário.</li>
+              <li>Depois da <strong>Grande Árvore Amaldiçoada</strong> ou do <strong>Sábio de Cristal</strong>, fale de novo: ganha a <em>Joia Pesada</em>.</li>
+              <li>Depois dos <strong>Vigias do Abismo</strong>, esgote o diálogo: ganha o <em>Anel de Farron</em>.</li>
+              <li>Com os quatro chefes derrotados (Árvore, Sábio, Diáconos e Vigias), ele vai embora. O escudo dele fica no túmulo atrás de Andre.</li>
+              <li>Pegue a <strong>Pedra do Torso do Dragão Cintilante</strong> no Pico do Arquidragão. Ele chama você para um duelo na arena dos Vigias do Abismo. Vença para ganhar a <em>Pedra da Cabeça</em>.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Hawkwood" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Leonhard, o Dedo Anelado</span><span class="dificuldade missao">Pacto</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Santuário do Elo do Fogo</dd></div>
+              <div><dt>Recompensa</dt><dd>Orbe do Olho Vermelho, Espada da Lua Crescente, Máscara de Prata</dd></div>
+              <div><dt>Cuidado</dt><dd>Oferecer Línguas Pálidas a Rosaria encerra a missão de Sirris</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Depois da segunda fogueira da Muralha Alta, fale com ele encostado no trono do Santuário: ganha 5 <em>Orbes do Olho Vermelho Rachado</em>.</li>
+              <li>Tenha uma <strong>Língua Pálida</strong> no inventário e acenda a fogueira Sob o Penhasco ou derrote a Grande Árvore Amaldiçoada. Volte e ele entrega a <strong>Chave da Câmara do Elevador</strong>.</li>
+              <li>Use a chave na porta dois andares abaixo da fogueira Torre na Muralha, derrote o <strong>Espectro Negro</strong> e volte: ganha o <em>Orbe do Olho Vermelho</em> e o gesto Aplaudir.</li>
+              <li><strong>Catedral das Profundezas:</strong> ofereça uma Língua Pálida a <strong>Rosaria</strong> e esgote o diálogo com Leonhard na entrada do quarto dela.</li>
+              <li>Depois de acender a fogueira da <strong>Capital Profanada</strong>, volte ao quarto de Rosaria. Ela estará morta; pegue o <strong>Orbe do Olho Negro</strong> ao lado do corpo.</li>
+              <li><strong>Anor Londo:</strong> use o orbe no quarto de Gwynevere, acima da fogueira de Aldrich, e derrote Leonhard: ganha a <em>Espada da Lua Crescente</em>, a <em>Máscara de Prata</em> e a Alma de Rosaria.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Leonhard" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Karla</span><span class="dificuldade missao">Mercador</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Masmorra de Irithyll</dd></div>
+              <div><dt>Recompensa</dt><dd>Feitiços sombrios, Chama Negra, piromancias de Quelana</dd></div>
+              <div><dt>Cuidado</dt><dd>Se ela morrer antes de receber os tomos, os feitiços se perdem</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Pegue o <strong>Molho de Chaves do Carcereiro</strong> na Capital Profanada: suba a escada no pântano tóxico e vá pela esquerda no telhado.</li>
+              <li>Abra a cela dela no térreo da Masmorra de Irithyll, ao lado dos Carcereiros, e escolha <strong>salvá-la mesmo assim</strong>.</li>
+              <li>Ela vai para o Santuário, no nicho sob a escada à esquerda de Andre. Peça para aprender feitiçarias sombrias.</li>
+              <li>Entregue o <strong>Tomo de Quelana</strong>: Chicote de Fogo, Tempestade de Fogo e Afinidade.</li>
+              <li>Entregue o <strong>Tomo do Guardião do Túmulo</strong>: Chama Negra e Orbe de Fogo Negro.</li>
+              <li>Entregue os tomos em braille de <strong>Londor</strong> e das <strong>Profundezas</strong>, pedindo duas vezes por tomo, para liberar milagres sombrios. Dar esses tomos a ela, e não a Irina, protege a missão de Irina.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Karla" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Guardiã do Fogo</span><span class="dificuldade missao">Final</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Santuário do Elo do Fogo</dd></div>
+              <div><dt>Recompensa</dt><dd>Final O Fim do Fogo</dd></div>
+              <div><dt>Cuidado</dt><dd>Não ataque a Guardiã depois de entregar os Olhos</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Pegue a <strong>Alma da Guardiã do Fogo</strong> na torre acima do Santuário e entregue a ela. Com isso ela passa a poder curar a Marca Sombria.</li>
+              <li>Derrote o Campeão Gundyr nos <strong>Túmulos Abandonados</strong> e encontre os <strong>Olhos da Guardiã do Fogo</strong> no Santuário sombrio.</li>
+              <li>Entregue os Olhos à Guardiã. A música do Santuário muda, sinal de que a missão está ativa.</li>
+              <li>Quando ela perguntar, escolha desejar <strong>um mundo sem chama</strong>.</li>
+              <li>Derrote a <strong>Alma de Cinzas</strong> e use o sinal de invocação dela na fogueira para ver o final <strong>O Fim do Fogo</strong>.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Fire+Keeper" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>A Pintora <span class="selo-dlc" title="Ashes of Ariandel e The Ringed City">DLC</span></span><span class="dificuldade missao">História</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Mundo Pintado de Ariandel (Ashes of Ariandel)</dd></div>
+              <div><dt>Recompensa</dt><dd>Final da história das DLCs</dd></div>
+              <div><dt>Cuidado</dt><dd>Precisa das duas DLCs para terminar</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Derrote Sir Vilhelm, pegue a <strong>Chave do Mecanismo</strong> e suba ao sótão para conhecer a pintora. Ela fala do "tio Gael" e do mundo que quer pintar.</li>
+              <li>Depois de abrir o altar deslizante na câmara cheia de moscas, ela se muda para a <strong>Capela de Ariandel</strong>.</li>
+              <li>Derrote a <strong>Irmã Friede</strong> e acenda a chama. A pintora diz que precisa de pigmento para começar.</li>
+              <li>Na <strong>Cidade Anelada</strong>, derrote o <strong>Escravo Cavaleiro Gael</strong> e pegue o <em>Sangue da Alma Sombria</em>.</li>
+              <li>Volte ao sótão, entregue o sangue e diga seu nome. Ela dará esse nome ao novo mundo.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Painting+Woman" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Lapp, o Amnésico <span class="selo-dlc" title="The Ringed City">DLC</span></span><span class="dificuldade missao">Aliado</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Monte de Detritos (The Ringed City)</dd></div>
+              <div><dt>Recompensa</dt><dd>Conjunto de Lapp, Ossos do Campeão, Siegbräu</dd></div>
+              <div><dt>Cuidado</dt><dd>Conte onde fica o Monumento Purificador antes do último chefe, ou ele vira inimigo</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Depois que a torre cai, use-a como ponte e fale com Lapp na igreja destruída, entre os Cavaleiros de Lothric.</li>
+              <li><strong>Pico de Terra:</strong> ele está no alto, perto da primeira fogueira. Esgote o diálogo sobre o tesouro, pegue o <strong>Placa de Titanita</strong> no pântano e volte: ganha Siegbräu.</li>
+              <li>Invoque-o contra os <strong>Demônios Príncipes</strong>, pelo sinal na borda antes da névoa.</li>
+              <li><strong>Cidade Anelada:</strong> fale com ele na varanda em frente ao atalho trancado. Ele procura o <strong>Monumento Purificador</strong>.</li>
+              <li>Encontre-o de novo na sala redonda com cadeiras, depois dos Cavaleiros Anelados. Ache o monumento e conte a ele onde fica.</li>
+              <li>Depois do trecho do sopro de <strong>Midir</strong>, desça ao <strong>Túmulo Compartilhado</strong> e siga as instruções dele. Pegue o Conjunto de Lapp e os Ossos do Campeão do lado de fora da sala.</li>
+              <li>Invoque-o contra <strong>Halflight, a Lança da Igreja</strong>, atrás da porta direita da catedral.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Amnesiac+Lapp" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+        <details>
+          <summary><span>Shira, Cavaleira de Filianore <span class="selo-dlc" title="The Ringed City">DLC</span></span><span class="dificuldade missao">Duelo</span></summary>
+          <div class="chefe">
+            <dl class="ficha">
+              <div><dt>Começa em</dt><dd>Cidade Anelada (The Ringed City)</dd></div>
+              <div><dt>Recompensa</dt><dd>Sino Sagrado de Filianore, Crucifixo do Rei Louco, Conjunto de Shira</dd></div>
+              <div><dt>Cuidado</dt><dd>Conte a ela que Midir caiu antes de ir ao Descanso de Filianore</dd></div>
+            </dl>
+            <ol class="passos">
+              <li>Perto da fogueira da Muralha Interna Anelada, desça a torre e atravesse os prédios. Ela está atrás de uma porta trancada. Fale com ela e aceite o pedido: ganha o <em>Sino Sagrado de Filianore</em>.</li>
+              <li>Invoque-a contra <strong>Midir, Devorador da Escuridão</strong>, pelo sinal perto da estátua mais à esquerda.</li>
+              <li>Depois de derrotar Midir, volte e conte a ela que ele caiu no abismo: ganha um <em>Placa de Titanita</em>.</li>
+              <li>No <strong>Descanso de Filianore</strong>, siga a parede direita até o prédio em ruínas. Shira invade e ataca. Derrote-a para ganhar o <em>Crucifixo do Rei Louco</em>. O conjunto dela fica na sala onde vocês se conheceram.</li>
+            </ol>
+            <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Shira" target="_blank" rel="noopener">Ver na wiki →</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== ESTRATÉGIAS ===================== -->
+    <section class="pagina" id="chefes" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">⚔️</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo V</p>
+          <h1>Os Chefes de Lothric</h1>
           <p class="perfil-citacao">"Não se precipite. Paciência é a arma mais afiada."</p>
         </div>
       </div>
@@ -219,6 +612,10 @@
               <div><dt>Resistência</dt><dd>Trevas, Sangramento</dd></div>
             </dl>
             <p>Circule para o lado direito dele com o escudo erguido e fique atento ao agarrão. Use as <strong>Bombas de Fogo</strong> do tutorial, principalmente na segunda fase. Quando a massa negra surgir, mantenha distância e puna após o salto com corte.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <p>Nenhuma invocação de NPC nesta luta. O modo cooperativo fica desativado no tutorial.</p>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Iudex+Gundyr" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -232,6 +629,13 @@
               <div><dt>Resistência</dt><dd>Físico (exceto impacto), Magia, Fogo, Raio</dd></div>
             </dl>
             <p>Fique embaixo e atrás dele na primeira fase. Na segunda, role na perpendicular às investidas e vá para trás dele durante o sopro de gelo. O <strong>Machado de Batalha das Profundezas</strong> (dano de trevas) é excelente aqui.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Mestre Espadachim</strong> — derrote-o do lado de fora do Santuário do Elo do Fogo; depois o sinal dele aparece em frente à sala do Vordt.</li>
+                <li><strong>Cavaleiro Leão Albert</strong> — sinal perto da névoa, disponível enquanto você não tiver a Bacia dos Votos.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Vordt+of+the+Boreal+Valley" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -245,6 +649,14 @@
               <div><dt>Resistência</dt><dd>Trevas, Veneno/Tóxico</dd></div>
             </dl>
             <p>Na primeira fase, o vigia de olhos vermelhos ataca os outros: aproveite a confusão. Na segunda (espada em chamas), mantenha distância e espere o fim dos combos. Ele cambaleia fácil e permite backstab após o combo de 3 golpes.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Sirris dos Reinos sem Sol</strong> — fale com ela duas vezes no Santuário; o sinal fica à esquerda da entrada da sala.</li>
+                <li><strong>Sombra Pálida de Londor</strong> — só para quem tem as 5 Marcas Sombrias de Yoel e segue do lado de Yuria.</li>
+                <li><strong>Heysel Dedo Amarelo</strong> — derrote a invasão dela e ofereça uma Língua Pálida a Rosaria.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Abyss+Watchers" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -258,6 +670,12 @@
               <div><dt>Resistência</dt><dd>Corte, Estocada</dd></div>
             </dl>
             <p>Pegue a <strong>Tempestuosa</strong> no fundo da arena e carregue a habilidade até brilhar em branco. Dá para segurar a carga e soltar no momento seguro. Com a missão de Siegward concluída, ele chega com outra Tempestuosa. <em>*Sem a Tempestuosa, é outra história.</em></p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Siegward de Catarina</strong> — não precisa de sinal: se a missão dele estiver em dia, ele entra na névoa com você trazendo a Storm Ruler.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Yhorm+the+Giant" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -271,6 +689,14 @@
               <div><dt>Resistência</dt><dd>Veneno, Tóxico, Gelo, Sangramento</dd></div>
             </dl>
             <p>Circule perto do lado esquerdo dele na primeira fase. Quando o clone aparecer, destrua-o rápido: ele antecipa o próximo ataque. Não seja ganancioso, um golpe costuma virar uma sequência. Aceita parry (menos agarrões, projéteis e saltos).</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Mão Negra Gotthard</strong> — sinal em frente ao portão do Pontífice. Rende o gesto Por Minha Espada.</li>
+                <li><strong>Anri de Astora</strong> — sinal diante de uma estátua, à direita de quem está de costas para a névoa. Causa muito dano.</li>
+                <li><strong>Sombra Pálida de Londor</strong> — sinal diante da estátua à direita da névoa; só para quem segue Yoel e Yuria.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Pontiff+Sulyvahn" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -284,6 +710,12 @@
               <div><dt>Resistência</dt><dd>Sangramento; imune a veneno e gelo</dd></div>
             </dl>
             <p>Role <strong>em direção</strong> a ela nos cortes largos e fique no flanco traseiro. Atenção à reverência de "cobra" antes do agarrão. Na segunda fase ela usa duas espadas: use os pilares e só ataque após combos longos.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Mestre Espadachim</strong> — só se você enfrentar a Dançarina antes do Vordt, depois de derrotá-lo no Santuário; o sinal fica em frente à sala do Vordt.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Dancer+of+the+Boreal+Valley" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -297,6 +729,10 @@
               <div><dt>Resistência</dt><dd>F1: Fogo, Sangramento · F2: Raio, Gelo, Sangramento</dd></div>
             </dl>
             <p>Fase 1: trave a mira no cavaleiro e ataque a cabeça do dragão; nas patas o dano é mínimo. Fase 2: use carga leve/média para rolar bem. A estocada carregada na altura da cintura não se esquiva para o lado: role na diagonal.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <p>Nenhuma invocação de NPC nesta luta.</p>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Nameless+King" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -310,6 +746,13 @@
               <div><dt>Resistência</dt><dd>Fogo, Sangramento; imune a veneno</dd></div>
             </dl>
             <p>Na primeira fase seja agressivo para interromper as curas. Na segunda, fique a distância, espere o salto ou a estocada correndo e puna. Evite trocar golpes durante <em>Poder Interior</em> e o estilo de espada curva. Não aceita parry.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Yuria de Londor</strong> — sinal logo antes da névoa; exige ter concluído o casamento com Anri no Templo da Lua Negra.</li>
+                <li><strong>Sombra Pálida de Londor</strong> — no meio da escadaria em espiral, à direita; só para quem é aliado de Yuria.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Soul+of+Cinder" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -323,6 +766,12 @@
               <div><dt>Resistência</dt><dd>Magia e status (Friede)</dd></div>
             </dl>
             <p>Invoque <strong>Gael</strong>: ele facilita muito as fases 2 e 3. Quando ela ficar invisível, procure a névoa ou ouça os passos e vá até ela. Na fase 3 (Chama Negra), mantenha distância e ataque entre os combos. Aceita parry.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Escravo Cavaleiro Gael</strong> — sinal na sala da fogueira da capela, à esquerda da escada. Recomendado para as fases 2 e 3. Some se você derrotar os Demônios Príncipes antes.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Sister+Friede" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
@@ -336,11 +785,17 @@
               <div><dt>Resistência</dt><dd>Trevas, Fogo, Magia; imune a status</dd></div>
             </dl>
             <p>Fique perto da cabeça: ele usa golpes corpo a corpo mais previsíveis. Raio e a magia <em>Névoa Pestilenta</em> funcionam muito bem. Evite invocar Shira, porque Midir passa a usar mais ataques à distância.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <ul>
+                <li><strong>Shira, Cavaleira de Filianore</strong> — sinal na sala de preparação, perto da estátua mais à esquerda; só antes de despertar Filianore. Cuidado: os ataques à distância dela provocam os golpes mais perigosos de Midir.</li>
+              </ul>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Darkeater+Midir" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
         <details>
-          <summary><span>Escravo Cavaleiro Gael</span><span class="dificuldade" data-nivel="5">Lendário</span></summary>
+          <summary><span>Escravo Cavaleiro Gael</span><span class="dificuldade" data-nivel="3">Difícil</span></summary>
           <div class="chefe">
             <dl class="ficha">
               <div><dt>Local</dt><dd>Descanso de Filianore (DLC)</dd></div>
@@ -349,39 +804,258 @@
               <div><dt>Resistência</dt><dd>Sangramento, Corte (trevas nas fases 2-3)</dd></div>
             </dl>
             <p>Fase 1: armas pesadas o fazem cambalear. Fases 2-3: role <strong>para frente</strong>, para o lado da espada; a capa acerta quem rola para trás. Na fase 3, os raios caem onde as almas pousaram: observe as marcas no chão. Não aceita parry.</p>
+            <div class="local invocacoes">
+              <span>Invocações</span>
+              <p>Nenhuma invocação de NPC nesta luta.</p>
+            </div>
             <a class="wiki" href="https://darksouls3.wiki.fextralife.com/Slave+Knight+Gael+(Boss)" target="_blank" rel="noopener">Ver na wiki →</a>
           </div>
         </details>
       </div>
+    </section>
+
+    <!-- ===================== DESAFIOS ===================== -->
+    <section class="pagina" id="estrategias" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">💀</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo VI</p>
+          <h1>Vencendo o Impossível</h1>
+          <p class="perfil-citacao">"Não se precipite. Paciência é a arma mais afiada."</p>
+        </div>
+      </div>
 
       <h2 class="secao-titulo">Desafios da Comunidade</h2>
       <div class="grade">
-        <article class="cartao">
+        <article data-historia="sl1" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🔗 Nível de Alma 1 (SL1)</h3>
-          <p>Sem subir nenhum nível. Comece como <strong>Despossuído</strong> (a única classe de nível 1), use armas de baixo requisito (Adaga, Cimitarra, Espada Longa) e reforce-as ao máximo. Aprender parry é obrigatório.</p>
+          <p>Sem subir nenhum nível. Comece como <strong>Despossuído</strong> (a única classe de nível 1), use armas de baixo requisito (Adaga, Espada Larga, Espada Longa) e reforce-as ao máximo. Aprender parry é obrigatório.</p>
         </article>
-        <article class="cartao">
+        <article data-historia="no-hit" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🚫 No-Hit Run</h3>
           <p>Terminar o jogo sem levar dano. Pratique cada chefe individualmente, use rotas fixas e evite inimigos opcionais.</p>
         </article>
-        <article class="cartao">
+        <article data-historia="sem-estus" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🔥 Sem Estus</h3>
           <p>Nenhuma cura por frasco. Aposte em milagres de cura, Anel da Vida e armaduras resistentes. Cada erro custa caro.</p>
         </article>
-        <article class="cartao">
+        <article data-historia="escudo" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🛡️ Só Escudo (Pure Shield)</h3>
           <p>Nada de armas: use apenas o escudo — golpes de escudo e muita paciência. O Grande Escudo de Havel é um clássico.</p>
         </article>
-        <article class="cartao">
+        <article data-historia="randomizer" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🎲 Randomizer</h3>
           <p>Use o mod randomizer para embaralhar itens e inimigos. Cada partida é única — ótimo para quem já zerou várias vezes.</p>
         </article>
-        <article class="cartao">
+        <article data-historia="all-bosses" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🔔 All Bosses</h3>
           <p>Mate todos os 25 chefes (incluindo DLCs) em uma única jogada. Organize a ordem para evitar recorrer a rotas longas.</p>
         </article>
       </div>
+
+      <!-- Guias dos desafios: abertos ao clicar no card com o data-historia correspondente -->
+      <template id="historia-sl1" data-tag="Desafio">
+        <p>Terminar o jogo sem subir <strong>nenhum nível</strong>. Todos os atributos ficam em 10 do começo ao fim, então a força vem só do reforço das armas, de itens consumíveis e da sua habilidade.</p>
+        <h4>Preparação</h4>
+        <ol class="passos">
+          <li>Crie o personagem como <strong>Despossuído</strong> (<em>Deprived</em>), a única classe que começa no nível 1.</li>
+          <li>Como presente, escolha o <strong>Anel da Vida</strong> (mais HP) ou as <strong>Bombas de Fogo Negras</strong> (dano alto logo no início).</li>
+          <li>Nunca fale com a Guardiã do Fogo para subir de nível. Almas servem para comprar itens e reforçar armas.</li>
+        </ol>
+        <h4>Armas e reforço</h4>
+        <ol class="passos">
+          <li>Use armas que pedem no máximo 10 de Força e 10 de Destreza: <strong>Adaga</strong> (vendida pela Criada do Santuário), <strong>Espada Larga</strong> (Muralha Alta de Lothric), <strong>Cestus</strong> (esgotos do Assentamento dos Mortos-Vivos) ou <strong>Espada Longa</strong>. Segurando com as duas mãos, a Força conta 50% a mais, o que libera a <strong>Maça</strong>.</li>
+          <li>Aplique a infusão <strong>Rústica</strong> (<em>Raw Gem</em>): ela dá dano fixo e não depende de atributos, perfeita para SL1. A joia cai de Soldados Esvaziados.</li>
+          <li>Invista toda a Titanita em <strong>uma só arma</strong>. Reforçar é a única forma de subir o dano.</li>
+          <li>Pegue fragmentos de Estus e ossos de Morto-Vivo: mais frascos e mais cura não contam como nível.</li>
+        </ol>
+        <h4>Na luta</h4>
+        <ol class="passos">
+          <li>Aprenda a <strong>aparar</strong> (<em>parry</em>). Um contra-ataque crítico causa dano enorme mesmo com atributos baixos, e funciona na maioria dos inimigos humanos e em chefes como o Campeão Gundyr.</li>
+          <li>Leve resinas para os chefes: <strong>Resina de Pinho Dourado</strong> (raio) e <strong>Ruge de Carthus</strong> (sangramento) aumentam muito o dano.</li>
+          <li>Contra Yhorm, use a <em>Storm Ruler</em>: o dano dela não depende de nível.</li>
+          <li>Com pouco HP, quase tudo mata em dois golpes. Priorize esquivar e só ataque nas janelas seguras.</li>
+        </ol>
+
+        <h3 class="guia-parte">Onde conseguir</h3>
+
+        <h4>Armas</h4>
+        <ul class="locais">
+          <li><strong>Adaga</strong> — vendida pela Criada do Santuário por 300 almas, disponível desde o início.</li>
+          <li><strong>Espada Larga</strong> — Muralha Alta de Lothric, depois da fogueira Torre na Muralha, na sala onde está a chave da cela do Greirat, guardada por um Esvaziado de espada longa.</li>
+          <li><strong>Cestus</strong> — esgotos do Assentamento dos Mortos-Vivos, entre os ratos, no caminho entre as fogueiras <em>Cliff Underside</em> e <em>Dilapidated Bridge</em>.</li>
+          <li><strong>Maça</strong> — vendida por Greirat por 600 almas, depois de libertá-lo da cela na Muralha Alta.</li>
+          <li><strong>Escudo para aparar</strong> — o <strong>Broquel</strong> é vendido por Greirat (2.000 almas); a <strong>Adaga de Aparar</strong>, por Patches (2.000 almas).</li>
+        </ul>
+
+        <h4>Pedras de reforço</h4>
+        <ul class="locais">
+          <li><strong>Joia Rústica</strong> — garantida no Lagarto de Cristal dos telhados da Muralha Alta, atrás do Pus of Man; também cai dos Soldados Esvaziados. Não precisa de carvão: o Andre aplica a infusão desde o começo.</li>
+          <li><strong>Fragmento de Titanita</strong> (+1 a +3) — o melhor lugar para farmar é a Muralha Alta de Lothric: Soldados Esvaziados, Assassinos e Cavaleiros de Lothric deixam cair com frequência.</li>
+          <li><strong>Fragmento Grande</strong> (+4 a +6) — o Wyvern da Muralha Alta deixa 1 garantido e há 5 em corpos no Lago Latente. Com as <strong>Cinzas de Oriental</strong> (Irithyll, na área dos Cavaleiros de Prata arqueiros), a Criada passa a vender sem limite por 4.000 almas.</li>
+          <li><strong>Pedaço de Titanita</strong> (+7 a +9) — cai dos Cavaleiros de Lothric e dos Soldados Grandes no Castelo de Lothric. Com as <strong>Cinzas do Caçador de Dragões</strong> (Pico do Dragão Ancestral), a Criada vende por 13.000 almas.</li>
+          <li><strong>Placa de Titanita</strong> (+10) — Siegward dá uma quando você o liberta da cela na Masmorra de Irithyll, usando a <strong>Chave de Cela Antiga</strong> (no fim dos esgotos dos ratos, na mesma masmorra).</li>
+          <li><strong>Atalho</strong> — no Santuário, o corvo Pickle Pee troca uma Bomba de Fogo por um Fragmento Grande e uma Bomba de Fogo Negra por um Pedaço de Titanita (uma vez cada).</li>
+        </ul>
+
+        <h4>Resinas e consumíveis</h4>
+        <ul class="locais">
+          <li><strong>Resina de Pinho Dourado</strong> (raio) — 2 num nicho escondido embaixo do wyvern morto, entre as fogueiras da Muralha Alta. A Criada vende 3 depois das <strong>Cinzas do Caçador de Sonhos</strong> (Fortaleza de Farron, atrás de uma parede ilusória perto do Velho Lobo), e sem limite depois das <strong>Cinzas Amarelas</strong> (Masmorra de Irithyll).</li>
+          <li><strong>Resina de Pinho Carvão</strong> (fogo) — cai dos Esvaziados camponeses no Assentamento. A Criada vende por 500 almas depois das <strong>Cinzas do Coveiro</strong> (Assentamento, ao lado de uma árvore no cemitério das flechas do gigante).</li>
+          <li><strong>Ruge de Carthus</strong> (sangramento) — cai dos esqueletos nas Catacumbas de Carthus. A Criada vende por 1.000 almas depois das <strong>Cinzas do Guardião de Tumbas</strong> (Catacumbas de Carthus).</li>
+          <li><strong>Bomba de Fogo Negra</strong> — presente inicial ou comprada de Patches por 300 almas. Há 3 na Muralha Alta.</li>
+          <li><strong>Faca de Arremesso</strong> — Greirat vende por 20 almas. Ótima para puxar inimigos um de cada vez.</li>
+        </ul>
+
+        <h4>Anéis</h4>
+        <ul class="locais">
+          <li><strong>Anel de Cavaleiro</strong> (+5 Força) — Castelo de Lothric: da fogueira da Armadura Matadragões, suba a escada ao lado do elevador e siga pelos telhados. Com ele, a Força vai a 15 e libera armas mais fortes.</li>
+          <li><strong>Anel de Caçador</strong> (+5 Destreza) — Grande Arquivo, no alto da torre mais alta da cúpula, guardado por três Cavaleiros de Gertrude.</li>
+          <li><strong>Anel da Vida</strong> (+HP) — presente inicial, ou vendido pela Criada por 1.500 almas depois das Cinzas do Caçador de Sonhos.</li>
+          <li><strong>Anel de Chloranthy</strong> (stamina mais rápida) — Assentamento: pule do elevador que leva à Estrada dos Sacrifícios, siga pelo andaime e desça até a base da torre.</li>
+          <li><strong>Anel de Vespa</strong> (críticos mais fortes) — Cemitério Abandonado, perto do túmulo onde Hawkwood reza, guardado por um Cavaleiro Negro. Combina perfeitamente com o parry.</li>
+          <li><strong>Anel do Favor</strong> (HP, stamina e peso) — Irithyll, cai de uma das Feras de Sulyvahn na Reserva de Água.</li>
+        </ul>
+      </template>
+
+      <template id="historia-no-hit" data-tag="Desafio">
+        <p>Terminar o jogo <strong>sem levar nenhum dano</strong>. Um golpe, uma queda, veneno ou sangramento, e a run volta ao zero. É o desafio de quem conhece o jogo de cor, e o segredo é transformar cada trecho em uma sequência fixa de passos.</p>
+        <h4>1. Monte uma build de destreza</h4>
+        <ol class="passos">
+          <li>Comece como <strong>Mercenário</strong>: as <strong>Lâminas Gêmeas de Mercenário</strong> são rápidas e se recuperam logo depois de cada ataque.</li>
+          <li>Outra opção forte é a <strong>Uchigatana</strong>, que o Mestre da Espada deixa cair no Cemitério das Cinzas, antes do Santuário do Elo do Fogo.</li>
+          <li>Suba Destreza e Vigor (stamina). HP não importa: você não vai levar dano.</li>
+          <li>Mantenha o peso <strong>abaixo de 30%</strong> para ter o rolamento rápido, com mais invencibilidade.</li>
+        </ol>
+        <h4>2. Aproveite o HP cheio</h4>
+        <ol class="passos">
+          <li>Use o <strong>Anel da Espada de Lloyd</strong> (Catedral das Profundezas): ele aumenta o dano enquanto o HP está cheio, que numa No-Hit é o tempo todo.</li>
+          <li>Complete com o <strong>Anel de Caçador</strong> (+Destreza) e resinas para os chefes mais longos.</li>
+        </ol>
+        <h4>3. Planeje a rota</h4>
+        <ol class="passos">
+          <li>Defina uma rota fixa: quais áreas atravessar, quais fogueiras acender e quais inimigos <strong>ignorar</strong>. Cada inimigo evitado é um risco a menos.</li>
+          <li>Pegue só os itens que a build precisa. Desvios aumentam as chances de erro.</li>
+          <li>Anote a rota por escrito e siga sempre a mesma, até ela virar memória muscular.</li>
+        </ol>
+        <h4>4. Treine cada chefe separado</h4>
+        <ol class="passos">
+          <li>Faça um backup do save antes de cada chefe e treine só aquela luta até vencer várias vezes seguidas sem apanhar.</li>
+          <li>Decore os padrões de ataque. Veja a seção <strong>Chefes</strong> acima para os pontos fracos de cada um.</li>
+          <li>Seja conservador: um ou dois golpes por janela de ataque, nunca mais do que isso.</li>
+        </ol>
+        <h4>5. Faça a run</h4>
+        <ol class="passos">
+          <li>Use um contador de golpes (<em>hit counter</em>) na tela para registrar cada dano.</li>
+          <li>Comece com runs parciais, só os chefes principais, antes de tentar o jogo inteiro com DLCs.</li>
+          <li>Errou? Recomece com calma. Faz parte: runs no-hit costumam levar centenas de tentativas.</li>
+        </ol>
+        <p class="historia-fonte">Inspirado no <a href="https://www.youtube.com/watch?v=B_0EsxxXrEg" target="_blank" rel="noopener">tutorial de No Hit com build de destreza do Andy Alquimista</a>.</p>
+      </template>
+
+      <template id="historia-sem-estus" data-tag="Desafio">
+        <p>Zerar o jogo <strong>sem beber o Frasco de Estus</strong>. Cada ponto de HP perdido fica perdido até a próxima fogueira, então o desafio é trocar a cura fácil por preparo e defesa.</p>
+        <h4>Preparação</h4>
+        <ol class="passos">
+          <li>Combine as regras antes de começar. A versão mais comum permite o <strong>Estus de Cinzas</strong> (que recupera PF, não HP). Nesse caso, peça ao ferreiro Andre para colocar todas as cargas nele.</li>
+          <li>Escolha o <strong>Anel da Vida</strong> como presente inicial: mais HP é a sua margem de erro.</li>
+          <li>Considere começar como <strong>Clérigo</strong>, que já tem o milagre <strong>Cura</strong> (Irina de Carim também vende).</li>
+        </ol>
+        <h4>Formas de recuperar HP</h4>
+        <ol class="passos">
+          <li><strong>Milagres de cura</strong>: Cura e suas versões maiores, alimentados pelo Estus de Cinzas.</li>
+          <li><strong>Anel do Olho Maligno</strong>: recupera HP a cada inimigo morto. É dado por Anri de Astora.</li>
+          <li><strong>Ramo Verde Florido</strong>: recupera HP aos poucos. Cai das centopeias nos esgotos de Irithyll.</li>
+          <li><strong>Lágrimas de Negação</strong>: milagre que impede a morte uma vez, vendido por Irina depois de você entregar o Tomo Divino de Carim.</li>
+        </ol>
+        <h4>Na luta</h4>
+        <ol class="passos">
+          <li>Use armaduras mais pesadas e um escudo com 100% de defesa física. Bloquear é melhor que arriscar.</li>
+          <li>Descanse em todas as fogueiras: elas são a sua única cura completa.</li>
+          <li>Evite inimigos desnecessários no caminho até os chefes. Chegar com o HP cheio é metade da vitória.</li>
+        </ol>
+      </template>
+
+      <template id="historia-escudo" data-tag="Desafio">
+        <p>Terminar o jogo <strong>sem usar armas</strong>: só escudos. Parece piada, mas escudos podem ser reforçados, receber infusões e causar bastante dano quando usados do jeito certo.</p>
+        <h4>Como atacar com escudo</h4>
+        <ol class="passos">
+          <li>Segure o escudo com as <strong>duas mãos</strong>: assim o ataque normal vira um golpe de escudo.</li>
+          <li>Reforce o escudo com Titanita como se fosse uma arma, e aplique uma infusão que combine com a sua build (Pesada para Força, Afiada para Destreza).</li>
+          <li>Os grandes escudos têm habilidades próprias. O <strong>Escudo Grande de Havel</strong> tem <em>Carne de Pedra</em>, que aumenta a defesa.</li>
+        </ol>
+        <h4>Progressão</h4>
+        <ol class="passos">
+          <li>No começo, use o escudo inicial da classe e invista em Força e Vigor.</li>
+          <li>Com muita Força, os grandes escudos fazem mais dano e aguentam praticamente tudo.</li>
+          <li>O Escudo Grande de Havel fica no Pico do Dragão Ancestral (<em>Archdragon Peak</em>), com Havel, a Rocha. Ele exige 40 de Força.</li>
+        </ol>
+        <h4>Na luta</h4>
+        <ol class="passos">
+          <li>A defesa já está na mão: bloqueie, espere o fim do combo e bata.</li>
+          <li>Tome cuidado com a stamina. Bloquear e atacar consomem a mesma barra, e ficar sem ela abre a guarda.</li>
+          <li>Chefes que atravessam escudos (agarrões, magia, fogo) exigem esquiva mesmo assim.</li>
+        </ol>
+      </template>
+
+      <template id="historia-randomizer" data-tag="Desafio">
+        <p>O mod <strong>Item and Enemy Randomizer</strong> embaralha os itens do jogo e os inimigos de cada área. Um cavaleiro pode aparecer no lugar de um rato, e a sua arma favorita pode estar do outro lado do mapa. Cada partida é um jogo novo.</p>
+        <h4>Instalação</h4>
+        <ol class="passos">
+          <li>Baixe o <em>Dark Souls III Item and Enemy Randomizer</em> no <a href="https://www.nexusmods.com/darksouls3" target="_blank" rel="noopener">Nexus Mods</a>. Ele já vem com o <em>ModEngine</em>, que carrega o mod no jogo.</li>
+          <li>Extraia na pasta do jogo e siga o passo a passo do mod.</li>
+          <li><strong>Jogue offline.</strong> Mods no modo online podem resultar em banimento.</li>
+        </ol>
+        <h4>Configuração</h4>
+        <ol class="passos">
+          <li>Escolha o que embaralhar: só itens, só inimigos ou os dois. Iniciantes costumam começar só pelos itens.</li>
+          <li>Os itens-chave (chaves, cinzas dos Lordes) são posicionados com lógica, então o jogo sempre pode ser terminado.</li>
+          <li>Anote a <strong>seed</strong> (semente). Com a mesma seed, amigos jogam exatamente a mesma partida e dá para apostar corrida.</li>
+        </ol>
+        <h4>Dicas</h4>
+        <ol class="passos">
+          <li>Explore cada canto: aquela área opcional pode ter a arma que vai salvar a sua run.</li>
+          <li>Não se apegue a uma build. Use o que aparecer.</li>
+          <li>Com inimigos embaralhados, até o Cemitério das Cinzas pode ser mortal. Vá com calma nas primeiras áreas.</li>
+        </ol>
+      </template>
+
+      <template id="historia-all-bosses" data-tag="Desafio">
+        <p>Derrotar <strong>todos os 25 chefes</strong> em uma única jogada: os 19 do jogo base e os 6 das DLCs. O desafio está na organização, já que alguns ficam escondidos e o final encerra a partida.</p>
+        <h4>A ordem do jogo base</h4>
+        <ol class="passos">
+          <li>Iudex Gundyr → Vordt → Grande Árvore Amaldiçoada → Sábio de Cristal → Diáconos das Profundezas → Vigias do Abismo.</li>
+          <li>Alto Lorde Wolnir (Catacumbas de Carthus) → Velho Rei Demônio (Lago Latente).</li>
+          <li>Pontífice Sulyvahn → Aldrich → Yhorm → Dançarina do Vale Boreal → Armadura Matadragões.</li>
+          <li>Oceiros (Jardim do Rei Consumido) → Campeão Gundyr (Cemitério Abandonado).</li>
+          <li>Wyvern Ancestral → Rei Sem Nome (Pico do Dragão Ancestral) → Príncipes Gêmeos → Alma das Cinzas.</li>
+        </ol>
+        <h4>Os chefes escondidos</h4>
+        <ol class="passos">
+          <li><strong>Velho Rei Demônio</strong>: fica no Lago Latente, abaixo das Catacumbas de Carthus. É fácil passar direto.</li>
+          <li><strong>Oceiros e Campeão Gundyr</strong>: depois de Oceiros, procure uma parede ilusória no caminho que leva ao Cemitério Abandonado.</li>
+          <li><strong>Wyvern Ancestral e Rei Sem Nome</strong>: exigem o gesto <strong>Caminho do Dragão</strong>, usado em um altar específico para chegar ao Pico do Dragão Ancestral.</li>
+        </ol>
+        <h4>As DLCs</h4>
+        <ol class="passos">
+          <li><strong>Ashes of Ariandel</strong>: fale com Gael na capela da Catedral das Profundezas. Chefes: Campeão Coveiro e seu Lobo, e Irmã Friede.</li>
+          <li><strong>The Ringed City</strong>: acessada pela fogueira do Forno da Primeira Chama. Chefes: Demônio Príncipe, Halflight, Midir e Gael.</li>
+        </ol>
+        <h4>Cuidado com o final</h4>
+        <ol class="passos">
+          <li>Deixe a <strong>Alma das Cinzas</strong> por último. Depois de vencê-la, não toque na chama até terminar tudo: é isso que encerra a partida.</li>
+          <li>Tenha a lista de chefes à mão e marque cada um que derrotar.</li>
+        </ol>
+      </template>
     </section>
+
+    <!-- Janela com a história (Lore) ou o guia (Desafios) de cada card -->
+    <dialog class="ficha-item historia" id="historia" aria-labelledby="historia-titulo">
+      <button class="ficha-fechar" type="button" aria-label="Fechar">✕</button>
+      <span class="tag" id="historia-tag"></span>
+      <h3 id="historia-titulo"></h3>
+      <div class="historia-texto" id="historia-texto"></div>
+    </dialog>
 
   </main>
 

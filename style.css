@@ -15,7 +15,9 @@
 body[data-aba="lore"]        { --destaque: #d9a441; }
 body[data-aba="itens"]       { --destaque: #8fb6d9; }
 body[data-aba="web"]         { --destaque: #9fc78a; }
-body[data-aba="estrategias"] { --destaque: #e0612a; }
+body[data-aba="guias"]       { --destaque: #b48ad9; }
+body[data-aba="estrategias"],
+body[data-aba="chefes"]      { --destaque: #e0612a; }
 
 * { box-sizing: border-box; }
 
@@ -108,9 +110,11 @@ h1, h2, h3, .aba, .filtro, .tag, .marca, summary {
 }
 
 body[data-aba="lore"]        .fundo-lore,
+body[data-aba="guias"]       .fundo-lore,
 body[data-aba="itens"]       .fundo-itens,
 body[data-aba="web"]         .fundo-web,
-body[data-aba="estrategias"] .fundo-estrategias {
+body[data-aba="estrategias"] .fundo-estrategias,
+body[data-aba="chefes"]      .fundo-estrategias {
   opacity: 1;
 }
 
@@ -275,6 +279,11 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 3rem) 4
 .grade-lore { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1000px) { .grade-lore { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px)  { .grade-lore { grid-template-columns: 1fr; } }
+.grade-lore .cartao:not(.largo) { padding: 1.1rem 1.2rem; font-size: 0.98rem; line-height: 1.5; }
+.grade-lore .cartao:not(.largo) h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.grade-lore .cartao:not(.largo) p { margin-bottom: 0.6rem; }
+.grade-lore .cartao:not(.largo) .lista li { padding: 0.25rem 0; }
+.grade-lore .cartao:not(.largo) .lista span { font-size: 0.85rem; }
 
 .cartao h2 { margin: 0 0 0.8rem; font-size: 1.3rem; color: var(--ouro-claro); }
 .cartao h3, .link-cartao h3 { margin: 0.4rem 0 0.6rem; font-size: 1.1rem; color: var(--ouro-claro); }
@@ -410,6 +419,45 @@ strong { color: var(--ouro-claro); font-weight: 600; }
 .ficha-item .local li { margin-bottom: 0.2rem; }
 .ficha-item [hidden] { display: none; }
 
+/* Lore: cards clicáveis e janela com a história completa */
+.cartao[data-historia] { display: flex; flex-direction: column; cursor: pointer; }
+.cartao[data-historia] .seta { margin-top: auto; padding-top: 0.8rem; }
+.cartao[data-historia]:hover .seta, .cartao[data-historia]:focus-visible .seta { letter-spacing: 0.3em; }
+.cartao[data-historia]:focus { outline: none; }
+.cartao[data-historia]:focus-visible { border-color: var(--destaque); }
+.historia { width: min(760px, calc(100vw - 32px)); padding: 1.8rem 2rem; }
+.historia h3 { margin: 0.5rem 0 1rem; padding-right: 1.5rem; font-size: 1.6rem; color: var(--ouro-claro); }
+.historia-texto h4 {
+  margin: 1.4rem 0 0.5rem;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--destaque);
+}
+.historia-texto h4:first-child { margin-top: 0; }
+.historia-texto p { margin: 0 0 0.8rem; }
+.historia-texto a { color: var(--destaque); }
+.guia-parte {
+  margin: 2rem 0 0.2rem !important;
+  padding-top: 1.2rem;
+  font-size: 1.25rem !important;
+  border-top: 1px solid var(--borda);
+}
+.locais { margin: 0 0 0.8rem; padding: 0; list-style: none; }
+.locais li { margin-bottom: 0.55rem; padding-left: 0.9rem; border-left: 1px solid var(--borda); }
+.passos { margin: 0 0 0.8rem; padding-left: 1.6rem; }
+.passos li { margin-bottom: 0.5rem; padding-left: 0.3rem; }
+.passos li::marker { font-family: "Cinzel", serif; color: var(--destaque); }
+.historia-fonte {
+  margin-top: 1.4rem !important;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--texto-suave);
+  border-left: 2px solid var(--destaque);
+  background: rgba(0,0,0,0.35);
+}
+
 /* Links da web */
 .link-cartao { display: block; color: inherit; text-decoration: none; }
 .seta {
@@ -420,6 +468,41 @@ strong { color: var(--ouro-claro); font-weight: 600; }
   transition: letter-spacing 0.3s;
 }
 .link-cartao:hover .seta { letter-spacing: 0.3em; }
+.cartao-recente {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  border-left: 2px solid var(--destaque);
+  background: rgba(0,0,0,0.35);
+}
+.cartao-recente span { font-style: italic; }
+.cartao-recente[hidden] { display: none; }
+
+/* Publicações recentes (public/web/conteudos.json) */
+.publicacoes-info { margin: -0.8rem 0 1rem; font-size: 0.85rem; color: var(--texto-suave); }
+.publicacoes { list-style: none; margin: 0 0 3rem; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.publicacao {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-left: 2px solid var(--destaque);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.publicacao:hover { border-color: var(--destaque); transform: translateX(3px); }
+.publicacao .tag { flex: 0 0 6.5rem; text-align: center; margin-top: 0.15rem; }
+.publicacao-textos { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.publicacao-titulo { color: var(--ouro-claro); overflow-wrap: anywhere; }
+.publicacao-resumo { font-size: 0.9rem; color: var(--texto-suave); }
+.publicacao-meta { font-size: 0.8rem; color: var(--texto-suave); font-style: italic; }
+@media (max-width: 600px) {
+  .publicacao { flex-direction: column; gap: 0.4rem; }
+  .publicacao .tag { flex: none; }
+}
 
 /* Estratégias */
 .secao-titulo {
@@ -471,6 +554,16 @@ strong { color: var(--ouro-claro); font-weight: 600; }
 .dificuldade[data-nivel="2"] { color: #d9c441; }
 .dificuldade[data-nivel="3"] { color: #e0932a; }
 .dificuldade[data-nivel="4"] { color: #e0612a; }
+.dificuldade.missao { color: var(--destaque); }
+.selo-dlc {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  vertical-align: middle;
+  color: #0a0806;
+  background: var(--destaque);
+}
 .dificuldade[data-nivel="5"] { color: #ff3b3b; text-shadow: 0 0 8px #ff3b3b; }
 
 /* Local e link da wiki */
@@ -497,6 +590,10 @@ strong { color: var(--ouro-claro); font-weight: 600; }
   text-decoration: none;
 }
 .wiki:hover { text-decoration: underline; }
+
+.invocacoes { margin-bottom: 0.9rem; }
+.invocacoes ul { margin: 0; padding-left: 1.1rem; }
+.invocacoes li { margin-bottom: 0.3rem; }
 
 /* Ficha dos chefes */
 .chefe { padding: 0 1.3rem 1.2rem 2.6rem; }

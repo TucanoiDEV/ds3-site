@@ -16,6 +16,7 @@ function abrirAba(nome) {
   });
 
   if (nome === "itens") carregarCatalogo();
+  if (nome === "web") carregarPublicacoes();
 
   history.replaceState(null, "", "#" + nome);
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -23,6 +24,39 @@ function abrirAba(nome) {
 
 abas.forEach((aba) => {
   aba.addEventListener("click", () => abrirAba(aba.dataset.aba));
+});
+
+// ============ Lore e Desafios: texto completo de cada card ============
+// O texto de cada card fica em <template id="historia-..."> no index.html;
+// o data-tag do template define o rótulo da janela (padrão: "Lore")
+const historia = document.getElementById("historia");
+
+document.querySelectorAll("[data-historia]").forEach((card) => {
+  const seta = document.createElement("span");
+  seta.className = "seta";
+  const modelo = document.getElementById("historia-" + card.dataset.historia);
+  seta.textContent = modelo.dataset.tag ? "Ver o guia →" : "Ler a história →";
+  card.appendChild(seta);
+
+  const abrir = () => {
+    document.getElementById("historia-tag").textContent = modelo.dataset.tag || "Lore";
+    document.getElementById("historia-titulo").textContent = card.querySelector("h2, h3").textContent;
+    document.getElementById("historia-texto").replaceChildren(modelo.content.cloneNode(true));
+    historia.showModal();
+    historia.scrollTop = 0;
+  };
+  card.addEventListener("click", abrir);
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      abrir();
+    }
+  });
+});
+
+historia.querySelector(".ficha-fechar").addEventListener("click", () => historia.close());
+historia.addEventListener("click", (e) => {
+  if (e.target === historia) historia.close();
 });
 
 // ============ Catálogo completo de itens ============
@@ -208,6 +242,66 @@ busca.addEventListener("input", () => {
 new IntersectionObserver((entradas) => {
   if (entradas[0].isIntersecting && exibidos < visiveis.length) mostrarMais();
 }, { rootMargin: "400px" }).observe(fimCatalogo);
+
+// ============ Conteúdos da Web: publicações recentes ============
+// public/web/conteudos.json é regerado a cada poucas horas pelo GitHub Actions
+// (tools/gerar_web.py), então esta lista acompanha as novidades sozinha.
+const FONTES = { steam: "Steam", youtube: "YouTube", reddit: "Reddit", speedrun: "Speedrun" };
+const publicacoes = document.getElementById("publicacoes");
+const publicacoesInfo = document.getElementById("publicacoes-info");
+const relativo = new Intl.RelativeTimeFormat("pt-BR", { numeric: "auto" });
+let carregamentoWeb = null;
+
+function tempoAtras(iso) {
+  const segundos = (new Date(iso) - Date.now()) / 1000;
+  const unidades = [["year", 31536000], ["month", 2592000], ["week", 604800], ["day", 86400], ["hour", 3600], ["minute", 60]];
+  for (const [unidade, tamanho] of unidades) {
+    if (Math.abs(segundos) >= tamanho) return relativo.format(Math.round(segundos / tamanho), unidade);
+  }
+  return "agora mesmo";
+}
+
+function carregarPublicacoes() {
+  carregamentoWeb ??= fetch("web/conteudos.json", { cache: "no-cache" })
+    .then((r) => {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then(({ atualizado, itens }) => {
+      publicacoesInfo.textContent = `Atualizado ${tempoAtras(atualizado)}.`;
+      // O card "Notícias da Steam" mostra a notícia mais recente
+      const noticia = itens.find((i) => i.f === "steam");
+      const recente = document.getElementById("recente-steam");
+      if (noticia) {
+        recente.replaceChildren(criar("span", "", "Mais recente: "), criar("strong", "", noticia.t), ` · ${tempoAtras(noticia.d)}`);
+        recente.hidden = false;
+      }
+      publicacoes.replaceChildren(
+        ...itens.map((item) => {
+          const link = criar("a", "publicacao");
+          link.href = item.u;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.lang = "en";
+          const textos = criar("span", "publicacao-textos");
+          textos.append(criar("span", "publicacao-titulo", item.t));
+          if (item.r) textos.append(criar("span", "publicacao-resumo", item.r));
+          const data = criar("time", "publicacao-meta", [item.a, tempoAtras(item.d)].filter(Boolean).join(" · "));
+          data.dateTime = item.d;
+          data.lang = "pt-BR";
+          textos.append(data);
+          link.append(criar("span", "tag", FONTES[item.f] || item.f), textos);
+          const li = criar("li");
+          li.append(link);
+          return li;
+        })
+      );
+    })
+    .catch(() => {
+      publicacoesInfo.textContent = "Não foi possível carregar as publicações recentes.";
+      carregamentoWeb = null;
+    });
+}
 
 // ============ Brasas flutuando ============
 const brasas = document.getElementById("brasas");
