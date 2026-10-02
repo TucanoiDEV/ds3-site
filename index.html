@@ -172,6 +172,15 @@
         </div>
       </div>
 
+      <!-- Mapa da Titanita: dados em public/itens/titanita.json, desenhado pelo script.js -->
+      <h2 class="secao-titulo" id="mapa-titanita-titulo">Mapa da Titanita</h2>
+      <p class="catalogo-fonte">Onde encontrar cada pedra de reforço, área por área. O mapa é esquemático: mostra como as áreas se ligam, não a distância entre elas. Escolha uma pedra e clique numa área para ver os locais.</p>
+      <div class="filtros" id="filtros-titanita" role="group" aria-label="Filtrar pedras de Titanita"></div>
+      <div class="mapa-rolagem">
+        <svg class="mapa-titanita" id="mapa-titanita" viewBox="0 0 930 530" role="group" aria-label="Mapa das áreas de Lothric"></svg>
+      </div>
+      <div class="mapa-painel" id="mapa-painel" aria-live="polite"></div>
+
       <!-- Catálogo completo: gerado por tools/gerar_itens.py e montado pelo script.js -->
       <h2 class="secao-titulo" id="catalogo-completo">Catálogo completo</h2>
       <p class="catalogo-fonte">Todos os itens do jogo, com nomes e descrições oficiais da versão brasileira. Os locais onde encontrar cada item vêm da <a href="https://darksouls.fandom.com/wiki/Dark_Souls_III" target="_blank" rel="noopener">Dark Souls Wiki</a>; os de armas, escudos e catalisadores foram traduzidos, e os demais ainda estão em inglês. Clique num item para ver os detalhes.</p>
@@ -198,6 +207,7 @@
         <dl class="ficha" id="ficha-stats"></dl>
         <div class="ficha-desc" id="ficha-desc"></div>
         <div class="local" id="ficha-onde"><span>📍 Onde encontrar <small id="ficha-onde-en">(em inglês)</small></span><ul></ul></div>
+        <a class="wiki" id="ficha-mapa" href="#mapa-titanita-titulo" hidden>📍 Ver no mapa da Titanita →</a>
         <a class="wiki" id="ficha-wiki" target="_blank" rel="noopener">Ver página completa na wiki →</a>
       </dialog>
     </section>

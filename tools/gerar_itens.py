@@ -169,7 +169,36 @@ with open(os.path.join(os.path.dirname(__file__), "onde_pt.json"), encoding="utf
     ONDE_PT = json.load(f)
 
 
+# As pedras de Titanita usam os locais completos do mapa (public/itens/titanita.json),
+# já em português e agrupados por área, no lugar da lista resumida da wiki.
+with open(os.path.join(RAIZ, "public", "itens", "titanita.json"), encoding="utf-8") as f:
+    TITANITA = json.load(f)
+
+
+def onde_titanita(item):
+    pedra = next((k for k, p in TITANITA["pedras"].items() if p["n"] == item["n"]), None)
+    if not pedra:
+        return False
+    # Áreas na ordem em que aparecem no jogo, com as DLCs no fim
+    ordem = ["cemiterio", "santuario", "muralha", "assentamento", "estrada", "catedral", "farron",
+             "catacumbas", "lago", "irithyll", "calabouco", "capital", "anor-londo", "castelo", "jardim",
+             "tumulos", "biblioteca", "pico", "fornalha", "ariandel", "ruinas", "cidade-anelada"]
+    linhas = []
+    for area in sorted(TITANITA["areas"], key=lambda a: ordem.index(a["id"])):
+        locais = [l for l in TITANITA["locais"] if l["area"] == area["id"] and l["pedra"] == pedra]
+        if locais:
+            linhas.append([1, area["nome"]])
+            for l in locais:
+                linhas.append([2, l["t"]])
+                linhas += [[3, s] for s in l.get("sub", [])]
+    item["o"] = linhas
+    item.pop("oe", None)
+    return True
+
+
 def traduzir_onde(item):
+    if onde_titanita(item):
+        return
     linhas = item.get("o")
     if not linhas:
         return

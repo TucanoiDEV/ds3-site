@@ -15,7 +15,10 @@ function abrirAba(nome) {
     pagina.classList.toggle("ativa", pagina.id === nome);
   });
 
-  if (nome === "itens") carregarCatalogo();
+  if (nome === "itens") {
+    carregarCatalogo();
+    carregarMapa();
+  }
   if (nome === "web") carregarPublicacoes();
 
   history.replaceState(null, "", "#" + nome);
@@ -216,6 +219,11 @@ function abrirFicha(item) {
   onde.querySelector("ul").lang = item.oe ? "en" : "pt-BR";
   document.getElementById("ficha-onde-en").hidden = !item.oe;
 
+  // As pedras de Titanita ganham um atalho para o mapa, já filtrado pela pedra
+  const linkMapa = document.getElementById("ficha-mapa");
+  linkMapa.hidden = !PEDRA_POR_NOME[item.n];
+  linkMapa.dataset.pedra = PEDRA_POR_NOME[item.n] || "";
+
   document.getElementById("ficha-wiki").href =
     "https://darksouls.fandom.com/wiki/" + encodeURIComponent(item.u.replaceAll(" ", "_"));
 
@@ -244,6 +252,199 @@ busca.addEventListener("input", () => {
 new IntersectionObserver((entradas) => {
   if (entradas[0].isIntersecting && exibidos < visiveis.length) mostrarMais();
 }, { rootMargin: "400px" }).observe(fimCatalogo);
+
+// ============ Mapa da Titanita ============
+// Mapa esquemático das áreas, com os locais de cada pedra de reforço. Os dados
+// (áreas, ligações e locais em português) ficam em public/itens/titanita.json.
+const PEDRA_POR_NOME = {
+  "Titanite Shard": "fragmento",
+  "Large Titanite Shard": "grande",
+  "Titanite Chunk": "pedaco",
+  "Titanite Slab": "placa",
+  "Twinkling Titanite": "cintilante",
+  "Titanite Scale": "escama",
+};
+const SVG = "http://www.w3.org/2000/svg";
+const mapa = document.getElementById("mapa-titanita");
+const mapaPainel = document.getElementById("mapa-painel");
+const filtrosTitanita = document.getElementById("filtros-titanita");
+
+let dadosMapa = null;
+let pedraAtual = "todas";
+let areaAtual = null;
+let carregamentoMapa = null;
+
+function carregarMapa() {
+  carregamentoMapa ??= fetch("itens/titanita.json")
+    .then((r) => {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then((dados) => {
+      dadosMapa = dados;
+      desenharMapa();
+      montarFiltrosTitanita();
+      atualizarMapa();
+    })
+    .catch(() => {
+      mapaPainel.textContent = "Não foi possível carregar o mapa da Titanita.";
+      carregamentoMapa = null;
+    });
+}
+
+function elementoSvg(tag, atributos) {
+  const el = document.createElementNS(SVG, tag);
+  for (const [nome, valor] of Object.entries(atributos)) el.setAttribute(nome, valor);
+  return el;
+}
+
+function locaisDe(area) {
+  return dadosMapa.locais.filter((l) => l.area === area && (pedraAtual === "todas" || l.pedra === pedraAtual));
+}
+
+function desenharMapa() {
+  const porId = Object.fromEntries(dadosMapa.areas.map((a) => [a.id, a]));
+  const ligacoes = elementoSvg("g", { class: "mapa-ligacoes" });
+  for (const [de, para] of dadosMapa.ligacoes) {
+    const a = porId[de], b = porId[para];
+    ligacoes.append(elementoSvg("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y }));
+  }
+  mapa.append(ligacoes);
+
+  for (const area of dadosMapa.areas) {
+    const g = elementoSvg("g", {
+      class: "mapa-area" + (area.dlc ? " dlc" : ""),
+      tabindex: "0",
+      role: "button",
+      "data-area": area.id,
+    });
+    g.append(elementoSvg("rect", { x: area.x - 78, y: area.y - 26, width: 156, height: 52, rx: 4 }));
+    const texto = elementoSvg("text", { x: area.x, y: area.y + 5 - (area.rotulo.length - 1) * 8 });
+    area.rotulo.forEach((linha, i) => {
+      const tspan = elementoSvg("tspan", { x: area.x, dy: i ? 16 : 0 });
+      tspan.textContent = linha;
+      texto.append(tspan);
+    });
+    g.append(texto);
+    if (area.dlc) {
+      const selo = elementoSvg("text", { class: "mapa-selo", x: area.x - 72, y: area.y - 15 });
+      selo.textContent = "DLC";
+      g.append(selo);
+    }
+    const contador = elementoSvg("g", { class: "mapa-contador" });
+    contador.append(
+      elementoSvg("circle", { cx: area.x + 74, cy: area.y - 24, r: 13 }),
+      elementoSvg("text", { x: area.x + 74, y: area.y - 19.5 })
+    );
+    g.append(contador);
+    g.addEventListener("click", () => selecionarArea(area.id));
+    g.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        selecionarArea(area.id);
+      }
+    });
+    mapa.append(g);
+  }
+}
+
+function montarFiltrosTitanita() {
+  const opcoes = { todas: "Todas", ...Object.fromEntries(Object.entries(dadosMapa.pedras).map(([k, p]) => [k, p.np])) };
+  for (const [chave, nome] of Object.entries(opcoes)) {
+    const total = dadosMapa.locais.filter((l) => chave === "todas" || l.pedra === chave).length;
+    const botao = criar("button", "filtro" + (chave === pedraAtual ? " ativo" : ""), `${nome} (${total})`);
+    botao.type = "button";
+    botao.dataset.pedra = chave;
+    botao.addEventListener("click", () => selecionarPedra(chave));
+    filtrosTitanita.appendChild(botao);
+  }
+}
+
+function selecionarPedra(chave) {
+  pedraAtual = chave;
+  filtrosTitanita.querySelectorAll(".filtro").forEach((b) => b.classList.toggle("ativo", b.dataset.pedra === chave));
+  atualizarMapa();
+}
+
+function selecionarArea(id) {
+  areaAtual = areaAtual === id ? null : id;
+  atualizarMapa();
+}
+
+function atualizarMapa() {
+  mapa.querySelectorAll(".mapa-area").forEach((g) => {
+    const area = dadosMapa.areas.find((a) => a.id === g.dataset.area);
+    const total = locaisDe(area.id).length;
+    g.classList.toggle("vazia", total === 0);
+    g.classList.toggle("selecionada", area.id === areaAtual);
+    g.querySelector(".mapa-contador").style.display = total ? "" : "none";
+    g.querySelector(".mapa-contador text").textContent = total;
+    g.setAttribute("aria-label", `${area.nome}: ${total === 1 ? "1 local" : total + " locais"}`);
+    g.setAttribute("aria-pressed", area.id === areaAtual);
+  });
+  montarPainel();
+}
+
+function montarPainel() {
+  const pedras = dadosMapa.pedras;
+  const chaves = pedraAtual === "todas" ? Object.keys(pedras) : [pedraAtual];
+
+  if (!areaAtual) {
+    // Sem área escolhida: legenda com o uso de cada pedra
+    const titulo = criar("h3", "mapa-painel-titulo", "Clique numa área do mapa");
+    const lista = criar("ul", "mapa-legenda");
+    for (const k of chaves) {
+      const li = criar("li");
+      li.append(iconePedra(pedras[k]), criar("strong", "", pedras[k].np), ` — ${pedras[k].uso}`);
+      lista.append(li);
+    }
+    mapaPainel.replaceChildren(titulo, lista);
+    return;
+  }
+
+  const area = dadosMapa.areas.find((a) => a.id === areaAtual);
+  const titulo = criar("h3", "mapa-painel-titulo", area.nome);
+  if (area.dlc) titulo.append(" ", criar("span", "selo-dlc", "DLC"));
+  const blocos = [];
+  for (const k of chaves) {
+    const locais = dadosMapa.locais.filter((l) => l.area === areaAtual && l.pedra === k);
+    if (!locais.length) continue;
+    const cabecalho = criar("h4", "mapa-pedra");
+    cabecalho.append(iconePedra(pedras[k]), pedras[k].np, criar("small", "", ` · ${pedras[k].uso}`));
+    const lista = criar("ul", "locais");
+    for (const local of locais) {
+      const li = criar("li", "", local.t);
+      if (local.sub) {
+        const sub = criar("ul");
+        local.sub.forEach((s) => sub.append(criar("li", "", s)));
+        li.append(sub);
+      }
+      lista.append(li);
+    }
+    blocos.push(cabecalho, lista);
+  }
+  if (!blocos.length) {
+    const nome = pedraAtual === "todas" ? "Titanita" : pedras[pedraAtual].np;
+    blocos.push(criar("p", "mapa-vazio", `Não há ${nome} nesta área.`));
+  }
+  mapaPainel.replaceChildren(titulo, ...blocos);
+}
+
+function iconePedra(pedra) {
+  const img = criar("img", "mapa-icone");
+  img.src = "itens/img/" + pedra.i;
+  img.alt = "";
+  return img;
+}
+
+// Atalho da ficha de uma pedra: fecha a ficha e mostra o mapa filtrado
+document.getElementById("ficha-mapa").addEventListener("click", (e) => {
+  e.preventDefault();
+  ficha.close();
+  if (dadosMapa) selecionarPedra(e.currentTarget.dataset.pedra);
+  else pedraAtual = e.currentTarget.dataset.pedra;
+  document.getElementById("mapa-titanita-titulo").scrollIntoView({ behavior: "smooth" });
+});
 
 // ============ Conteúdos da Web: publicações recentes ============
 // public/web/conteudos.json é regerado a cada poucas horas pelo GitHub Actions

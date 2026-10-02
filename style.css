@@ -327,6 +327,58 @@ strong { color: var(--ouro-claro); font-weight: 600; }
 .filtro:hover { color: var(--texto); border-color: var(--destaque); }
 .filtro.ativo { background: var(--destaque); border-color: var(--destaque); color: #0a0806; }
 
+/* Mapa da Titanita: áreas em caixas ligadas por linhas (SVG), painel com os locais.
+   No celular o mapa rola de lado dentro da própria caixa, sem empurrar a página. */
+#mapa-titanita-titulo { scroll-margin-top: 110px; }
+.mapa-rolagem {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+}
+.mapa-titanita { display: block; width: 100%; min-width: 680px; height: auto; }
+.mapa-ligacoes line { stroke: var(--borda); stroke-width: 2; }
+.mapa-area { cursor: pointer; outline: none; }
+.mapa-area rect {
+  fill: #0d0a07;
+  stroke: var(--destaque);
+  stroke-width: 1.2;
+  transition: fill 0.2s, stroke-width 0.2s;
+}
+.mapa-area.dlc rect { stroke-dasharray: 5 3; }
+.mapa-area text {
+  fill: var(--texto);
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.mapa-area .mapa-selo { font-size: 9px; letter-spacing: 0.1em; text-anchor: start; fill: var(--texto-suave); }
+.mapa-contador circle { fill: var(--destaque); }
+.mapa-contador text { fill: #0a0806; font-size: 12px; font-weight: 700; }
+.mapa-area:hover rect, .mapa-area:focus-visible rect { fill: #17202a; stroke-width: 2; }
+.mapa-area.selecionada rect { fill: #24384b; stroke-width: 2.5; }
+.mapa-area.vazia rect { stroke: var(--borda); }
+.mapa-area.vazia text { fill-opacity: 0.38; }
+
+.mapa-painel {
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-left: 3px solid var(--destaque);
+}
+.mapa-painel-titulo { margin: 0 0 0.9rem; font-size: 1.15rem; color: var(--destaque); }
+.mapa-pedra { display: flex; align-items: center; gap: 0.5rem; margin: 1rem 0 0.6rem; font-size: 1rem; }
+.mapa-pedra small { font-family: "Cormorant Garamond", serif; font-size: 0.9rem; color: var(--texto-suave); letter-spacing: 0; }
+.mapa-icone { width: 28px; height: 28px; object-fit: contain; flex: none; }
+.mapa-painel .locais ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+.mapa-painel .locais ul li { border-left: none; padding-left: 0; margin-bottom: 0.3rem; }
+.mapa-legenda { margin: 0; padding: 0; list-style: none; }
+.mapa-legenda li { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.45rem; flex-wrap: wrap; }
+.mapa-vazio { margin: 0; color: var(--texto-suave); font-style: italic; }
+#ficha-mapa:not([hidden]) { display: block; margin-bottom: 0.7rem; }
+
 /* Catálogo completo */
 .catalogo-fonte { margin: -0.4rem 0 1.2rem; color: var(--texto-suave); font-size: 1rem; }
 .catalogo-fonte a { color: var(--destaque); }
