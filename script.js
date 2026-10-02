@@ -213,6 +213,8 @@ function abrirFicha(item) {
     })
   );
   onde.hidden = !item.o;
+  onde.querySelector("ul").lang = item.oe ? "en" : "pt-BR";
+  document.getElementById("ficha-onde-en").hidden = !item.oe;
 
   document.getElementById("ficha-wiki").href =
     "https://darksouls.fandom.com/wiki/" + encodeURIComponent(item.u.replaceAll(" ", "_"));
@@ -324,4 +326,7 @@ for (let i = 0; i < 35; i++) {
 const inicial = location.hash.slice(1);
 if (document.getElementById(inicial)?.classList.contains("pagina")) {
   abrirAba(inicial);
+  // O navegador também rola até o elemento do #, o que esconde o título atrás do
+  // cabeçalho fixo. Depois que a página carrega, volta ao topo.
+  addEventListener("load", () => window.scrollTo({ top: 0, behavior: "instant" }));
 }

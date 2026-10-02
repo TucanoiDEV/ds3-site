@@ -163,6 +163,21 @@ def onde_encontrar(texto, limite=8):
     return linhas
 
 
+# Traduções das linhas de "onde encontrar" (texto em inglês da wiki -> português),
+# usando os nomes oficiais de lugares, NPCs e itens. Linhas sem tradução ficam em inglês.
+with open(os.path.join(os.path.dirname(__file__), "onde_pt.json"), encoding="utf-8") as f:
+    ONDE_PT = json.load(f)
+
+
+def traduzir_onde(item):
+    linhas = item.get("o")
+    if not linhas:
+        return
+    item["o"] = [[prof, ONDE_PT.get(t, t)] for prof, t in linhas]
+    if any(t not in ONDE_PT for _, t in linhas):
+        item["oe"] = 1  # ainda há texto em inglês
+
+
 # ---------------- Montagem de cada item ----------------
 
 def num(v):
@@ -241,6 +256,8 @@ def montar(titulo, destino, texto, categorias):
     tpl = re.search(r"\{\{\s*(DaSIII(?:Weapon|Armor|Ring|Magic|Item))\s*\|", texto)
     if not tpl:
         return None  # páginas-índice (listas de tipos de arma etc.)
+    if re.search(r"\[\[Removed Content", texto, flags=re.I):
+        return None  # cortado do jogo final (ex.: Molotov Cocktail), não dá para obter
     f = campos(bloco(texto, tpl.group(1)))
     desc_campos = campos(bloco(texto, "Description") or "")
     descricao = [limpar(v, quebras=True) for k, v in desc_campos.items()
@@ -282,6 +299,7 @@ def montar(titulo, destino, texto, categorias):
     onde = onde_encontrar(texto)
     if onde:
         item["o"] = onde
+        traduzir_onde(item)
     img = limpar(f.get("image", "")).removeprefix("File:").strip()
     if img:
         item["_img"] = img

@@ -30,10 +30,10 @@
     <nav class="abas" role="tablist">
       <button class="aba ativa" role="tab" data-aba="lore" aria-selected="true">Lore</button>
       <button class="aba" role="tab" data-aba="itens" aria-selected="false">Itens</button>
-      <button class="aba" role="tab" data-aba="web" aria-selected="false">Conteúdos da Web</button>
       <button class="aba" role="tab" data-aba="guias" aria-selected="false">Guias</button>
       <button class="aba" role="tab" data-aba="chefes" aria-selected="false">Estratégias</button>
       <button class="aba" role="tab" data-aba="estrategias" aria-selected="false">Desafios</button>
+      <button class="aba" role="tab" data-aba="web" aria-selected="false">Conteúdos da Web</button>
     </nav>
   </header>
 
@@ -174,7 +174,7 @@
 
       <!-- Catálogo completo: gerado por tools/gerar_itens.py e montado pelo script.js -->
       <h2 class="secao-titulo" id="catalogo-completo">Catálogo completo</h2>
-      <p class="catalogo-fonte">Todos os itens do jogo, com nomes e descrições oficiais da versão brasileira. Os locais onde encontrar cada item vêm da <a href="https://darksouls.fandom.com/wiki/Dark_Souls_III" target="_blank" rel="noopener">Dark Souls Wiki</a> e estão em inglês. Clique num item para ver os detalhes.</p>
+      <p class="catalogo-fonte">Todos os itens do jogo, com nomes e descrições oficiais da versão brasileira. Os locais onde encontrar cada item vêm da <a href="https://darksouls.fandom.com/wiki/Dark_Souls_III" target="_blank" rel="noopener">Dark Souls Wiki</a>; os de armas, escudos e catalisadores foram traduzidos, e os demais ainda estão em inglês. Clique num item para ver os detalhes.</p>
 
       <div class="catalogo-controles">
         <input type="search" id="busca-itens" class="busca" placeholder="Buscar pelo nome (português ou inglês)…" aria-label="Buscar item">
@@ -197,84 +197,9 @@
         <p class="ficha-efeito" id="ficha-efeito"></p>
         <dl class="ficha" id="ficha-stats"></dl>
         <div class="ficha-desc" id="ficha-desc"></div>
-        <div class="local" id="ficha-onde"><span>📍 Onde encontrar <small>(em inglês)</small></span><ul lang="en"></ul></div>
+        <div class="local" id="ficha-onde"><span>📍 Onde encontrar <small id="ficha-onde-en">(em inglês)</small></span><ul></ul></div>
         <a class="wiki" id="ficha-wiki" target="_blank" rel="noopener">Ver página completa na wiki →</a>
       </dialog>
-    </section>
-
-    <!-- ===================== WEB ===================== -->
-    <section class="pagina" id="web" role="tabpanel">
-      <div class="perfil">
-        <div class="perfil-emblema">📜</div>
-        <div>
-          <p class="perfil-rotulo">Capítulo III</p>
-          <h1>Mensagens de Outros Mundos</h1>
-          <p class="perfil-citacao">"Tente pular... ah, espere."</p>
-        </div>
-      </div>
-
-      <h2 class="secao-titulo">Mensagens recentes</h2>
-      <p class="publicacoes-info" id="publicacoes-info">Carregando…</p>
-      <ul class="publicacoes" id="publicacoes"></ul>
-
-      <h2 class="secao-titulo">Pedras de invocação</h2>
-      <div class="grade">
-        <a class="link-cartao" href="https://darksouls3.wiki.fextralife.com/" target="_blank" rel="noopener">
-          <span class="tag">Wiki</span>
-          <h3>Fextralife Wiki</h3>
-          <p>A enciclopédia mais completa: localização de itens, stats de armas, NPCs, chefes e rotas.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://www.youtube.com/@VaatiVidya" target="_blank" rel="noopener">
-          <span class="tag">YouTube</span>
-          <h3>VaatiVidya</h3>
-          <p>As famosas análises de lore em "Prepare to Cry". Obrigatório para entender a história escondida nos itens.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://www.reddit.com/r/darksouls3/" target="_blank" rel="noopener">
-          <span class="tag">Comunidade</span>
-          <h3>r/darksouls3</h3>
-          <p>Subreddit oficial da comunidade: dicas, builds, memes e pedidos de ajuda cooperativa.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://www.speedrun.com/darksouls3" target="_blank" rel="noopener">
-          <span class="tag">Speedrun</span>
-          <h3>Speedrun.com — DS3</h3>
-          <p>Rankings, categorias (Any%, All Bosses) e guias das rotas mais rápidas do mundo.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://www.nexusmods.com/darksouls3" target="_blank" rel="noopener">
-          <span class="tag">Mods</span>
-          <h3>Nexus Mods</h3>
-          <p>Mods de texturas, overhauls de gameplay e randomizadores de itens e inimigos.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://store.steampowered.com/app/374320/DARK_SOULS_III/" target="_blank" rel="noopener">
-          <span class="tag">Loja</span>
-          <h3>Dark Souls III na Steam</h3>
-          <p>Página oficial do jogo, com as DLCs, conquistas e avaliações da comunidade.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://store.steampowered.com/news/app/374320" target="_blank" rel="noopener">
-          <span class="tag">Notícias</span>
-          <h3>Notícias da Steam</h3>
-          <p>Patches oficiais e matérias da imprensa sobre Dark Souls III, reunidas pela Steam.</p>
-          <p class="cartao-recente" id="recente-steam" lang="en" hidden></p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://mugenmonkey.com/darksouls3" target="_blank" rel="noopener">
-          <span class="tag">Ferramenta</span>
-          <h3>Mugenmonkey — Planejador de Build</h3>
-          <p>Monte sua build, calcule atributos e compartilhe com amigos antes de gastar suas almas.</p>
-          <span class="seta">Visitar →</span>
-        </a>
-        <a class="link-cartao" href="https://www.youtube.com/results?search_query=dark+souls+3+no+hit+run" target="_blank" rel="noopener">
-          <span class="tag">YouTube</span>
-          <h3>No-Hit Runs</h3>
-          <p>Veja jogadores terminando o jogo sem levar nenhum golpe — pura inspiração (e humilhação).</p>
-          <span class="seta">Visitar →</span>
-        </a>
-      </div>
     </section>
 
     <!-- ===================== GUIAS ===================== -->
@@ -282,7 +207,7 @@
       <div class="perfil">
         <div class="perfil-emblema">🗝️</div>
         <div>
-          <p class="perfil-rotulo">Capítulo IV</p>
+          <p class="perfil-rotulo">Capítulo III</p>
           <h1>Destinos Entrelaçados</h1>
           <p class="perfil-citacao">"Cada alma que você encontra carrega uma história inacabada."</p>
         </div>
@@ -594,7 +519,7 @@
       <div class="perfil">
         <div class="perfil-emblema">⚔️</div>
         <div>
-          <p class="perfil-rotulo">Capítulo V</p>
+          <p class="perfil-rotulo">Capítulo IV</p>
           <h1>Os Chefes de Lothric</h1>
           <p class="perfil-citacao">"Não se precipite. Paciência é a arma mais afiada."</p>
         </div>
@@ -819,7 +744,7 @@
       <div class="perfil">
         <div class="perfil-emblema">💀</div>
         <div>
-          <p class="perfil-rotulo">Capítulo VI</p>
+          <p class="perfil-rotulo">Capítulo V</p>
           <h1>Vencendo o Impossível</h1>
           <p class="perfil-citacao">"Não se precipite. Paciência é a arma mais afiada."</p>
         </div>
@@ -829,7 +754,7 @@
       <div class="grade">
         <article data-historia="sl1" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🔗 Nível de Alma 1 (SL1)</h3>
-          <p>Sem subir nenhum nível. Comece como <strong>Despossuído</strong> (a única classe de nível 1), use armas de baixo requisito (Adaga, Espada Larga, Espada Longa) e reforce-as ao máximo. Aprender parry é obrigatório.</p>
+          <p>Sem subir nenhum nível. Comece como <strong>Despojado</strong> (a única classe de nível 1), use armas de baixo requisito (Espada Larga, Espada Longa, Adaga) e reforce-as ao máximo. Aprender parry é obrigatório.</p>
         </article>
         <article data-historia="no-hit" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🚫 No-Hit Run</h3>
@@ -841,7 +766,7 @@
         </article>
         <article data-historia="escudo" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🛡️ Só Escudo (Pure Shield)</h3>
-          <p>Nada de armas: use apenas o escudo — golpes de escudo e muita paciência. O Grande Escudo de Havel é um clássico.</p>
+          <p>Nada de armas: use apenas o escudo — golpes de escudo e muita paciência. O Escudo Grande de Havel é um clássico.</p>
         </article>
         <article data-historia="randomizer" tabindex="0" role="button" aria-haspopup="dialog" class="cartao">
           <h3>🎲 Randomizer</h3>
@@ -858,7 +783,7 @@
         <p>Terminar o jogo sem subir <strong>nenhum nível</strong>. Todos os atributos ficam em 10 do começo ao fim, então a força vem só do reforço das armas, de itens consumíveis e da sua habilidade.</p>
         <h4>Preparação</h4>
         <ol class="passos">
-          <li>Crie o personagem como <strong>Despossuído</strong> (<em>Deprived</em>), a única classe que começa no nível 1.</li>
+          <li>Crie o personagem como <strong>Despojado</strong> (<em>Deprived</em>), a única classe que começa no nível 1.</li>
           <li>Como presente, escolha o <strong>Anel da Vida</strong> (mais HP) ou as <strong>Bombas de Fogo Negras</strong> (dano alto logo no início).</li>
           <li>Nunca fale com a Guardiã do Fogo para subir de nível. Almas servem para comprar itens e reforçar armas.</li>
         </ol>
@@ -879,13 +804,21 @@
 
         <h3 class="guia-parte">Onde conseguir</h3>
 
-        <h4>Armas</h4>
+        <h4>Armas recomendadas</h4>
         <ul class="locais">
-          <li><strong>Adaga</strong> — vendida pela Criada do Santuário por 300 almas, disponível desde o início.</li>
-          <li><strong>Espada Larga</strong> — Muralha Alta de Lothric, depois da fogueira Torre na Muralha, na sala onde está a chave da cela do Greirat, guardada por um Esvaziado de espada longa.</li>
-          <li><strong>Cestus</strong> — esgotos do Assentamento dos Mortos-Vivos, entre os ratos, no caminho entre as fogueiras <em>Cliff Underside</em> e <em>Dilapidated Bridge</em>.</li>
-          <li><strong>Maça</strong> — vendida por Greirat por 600 almas, depois de libertá-lo da cela na Muralha Alta.</li>
-          <li><strong>Escudo para aparar</strong> — o <strong>Broquel</strong> é vendido por Greirat (2.000 almas); a <strong>Adaga de Aparar</strong>, por Patches (2.000 almas).</li>
+          <li><strong>Espada Larga</strong> (10 FOR · 10 DES) — <strong>a escolha nº 1 da comunidade para SL1</strong>, com infusão Rústica. Muralha Alta de Lothric, depois da fogueira Torre na Muralha, na sala onde está a chave da cela do Greirat, guardada por um Esvaziado de espada longa.</li>
+          <li><strong>Espada Longa</strong> (10 FOR · 10 DES) — alternativa com golpes parecidos, boa com infusão Rústica ou das Profundezas. Cai dos Soldados Esvaziados armados com ela; também é a arma inicial do Cavaleiro.</li>
+          <li><strong>Adaga</strong> (5 FOR · 9 DES) — rápida e ótima para críticos depois do parry. Vendida pela Criada do Santuário por 300 almas, desde o início.</li>
+          <li><strong>Cestus</strong> (5 FOR · 8 DES) — esgotos do Assentamento dos Mortos-Vivos, entre os ratos, no caminho entre as fogueiras <em>Cliff Underside</em> e <em>Dilapidated Bridge</em>. Também serve na mão esquerda.</li>
+          <li><strong>Maça</strong> (12 FOR) — só com as duas mãos, que levam a Força de 10 para 15. Vendida por Greirat por 600 almas, depois de libertá-lo da cela na Muralha Alta.</li>
+          <li><strong>Governante da Tempestade</strong> (<em>Storm Ruler</em>) — obrigatória contra Yhorm. Fica ao lado do trono dele, na Capital Profanada.</li>
+          <li><strong>Para aparar</strong> — o <strong>Broquel</strong> é vendido por Greirat (2.000 almas); a <strong>Adaga de Aparar</strong>, por Patches (2.000 almas). Os dois pedem mais Destreza do que você tem (13 e 14), então o parry fica mais lento até pegar o Anel de Caçador.</li>
+        </ul>
+        <h4>Opções para o fim do jogo</h4>
+        <ul class="locais">
+          <li><strong>Machado de Batalha de Millwood</strong> (15 FOR · 10 DES) — com o Anel de Cavaleiro (+5 Força) dá para usar com uma mão. Mundo Pintado de Ariandel, no alto da torre da vila destruída dos Cavaleiros de Millwood.</li>
+          <li><strong>Machado de Matador de Dragões</strong> (18 FOR · 14 DES) — precisa dos dois anéis: o de Caçador (Destreza 15) e o de Cavaleiro, segurando com as duas mãos (Força 15 × 1,5 = 22). Cai de Creighton, o Andarilho, em Irithyll (missão de Sirris). Fica muito forte com infusão Rústica.</li>
+          <li><strong>Faca de Bandido</strong> (6 FOR · 12 DES) — com o Anel de Caçador, aplica sangramento nos chefes. Vendida por Greirat por 1.500 almas.</li>
         </ul>
 
         <h4>Pedras de reforço</h4>
@@ -941,7 +874,7 @@
         <h4>4. Treine cada chefe separado</h4>
         <ol class="passos">
           <li>Faça um backup do save antes de cada chefe e treine só aquela luta até vencer várias vezes seguidas sem apanhar.</li>
-          <li>Decore os padrões de ataque. Veja a seção <strong>Chefes</strong> acima para os pontos fracos de cada um.</li>
+          <li>Decore os padrões de ataque. Veja a aba <strong>Estratégias</strong> para os pontos fracos de cada chefe.</li>
           <li>Seja conservador: um ou dois golpes por janela de ataque, nunca mais do que isso.</li>
         </ol>
         <h4>5. Faça a run</h4>
@@ -950,6 +883,15 @@
           <li>Comece com runs parciais, só os chefes principais, antes de tentar o jogo inteiro com DLCs.</li>
           <li>Errou? Recomece com calma. Faz parte: runs no-hit costumam levar centenas de tentativas.</li>
         </ol>
+
+        <h3 class="guia-parte">Armas recomendadas</h3>
+        <ul class="locais">
+          <li><strong>Lâminas Gêmeas de Mercenário</strong> (10 FOR · 16 DES) — o maior dano por segundo do jogo e golpes que se recuperam rápido. Vêm com o Mercenário; outro par fica atrás do Cavaleiro Negro, no fim do pântano do Bosque da Crucificação. Use infusão Afiada.</li>
+          <li><strong>Uchigatana</strong> (11 FOR · 16 DES) — alcance bom e ataques rápidos. Cai garantida do Mestre da Espada, no caminho da esquerda antes do Santuário do Elo do Fogo.</li>
+          <li><strong>Espada de Cavaleiro de Lothric</strong> (11 FOR · 18 DES) — a mais confiável pelo alcance longo: dá para bater de longe e continuar fora do alcance dos chefes. Cai dos Cavaleiros de Lothric armados com espada na Muralha Alta.</li>
+          <li><strong>Vara de Secar</strong> (18 FOR · 20 DES) — a katana de maior alcance, para quem prefere lutar de longe. Vendida pela Criada por 7.500 almas depois das Cinzas de Oriental.</li>
+        </ul>
+
         <p class="historia-fonte">Inspirado no <a href="https://www.youtube.com/watch?v=B_0EsxxXrEg" target="_blank" rel="noopener">tutorial de No Hit com build de destreza do Andy Alquimista</a>.</p>
       </template>
 
@@ -974,6 +916,15 @@
           <li>Descanse em todas as fogueiras: elas são a sua única cura completa.</li>
           <li>Evite inimigos desnecessários no caminho até os chefes. Chegar com o HP cheio é metade da vitória.</li>
         </ol>
+
+        <h3 class="guia-parte">Armas e equipamentos recomendados</h3>
+        <ul class="locais">
+          <li><strong>Espada Larga</strong> ou <strong>Espada Longa</strong> — as espadas retas com melhor dano em qualquer build. Matar rápido é se expor menos. A Espada Larga fica na Muralha Alta, na sala da chave da cela do Greirat.</li>
+          <li><strong>Sino Sagrado de Clérigo</strong> (14 FÉ) — a habilidade <em>Oração Gentil</em> é a cura que mais recupera HP por PF. Vem com o Clérigo e cai dos Esvaziados coveiros no Cemitério das Cinzas.</li>
+          <li><strong>Infusão Simples</strong> numa arma da mão esquerda (um Cestus, por exemplo) — regenera PF devagar, o que na prática dá curas infinitas entre as lutas. A Joia Simples cai do Lagarto de Cristal acima da fogueira do Pontífice Sulyvahn e dos Carcereiros da Masmorra de Irithyll.</li>
+          <li><strong>Escudo de Cavaleiro de Lothric</strong> (18 FOR) — 100% de defesa física e boa estabilidade. Cai dos Cavaleiros de Lothric armados com espada.</li>
+          <li><strong>Cura passiva</strong> — <strong>Anel da Princesa do Sol</strong> (2 HP por segundo; Anor Londo, no Quarto da Princesa), <strong>Olho Esquerdo do Pontífice</strong> (cura a cada golpe seguido; transposição da alma de Vordt) e armas com infusão <strong>Abençoada</strong>, que regeneram HP.</li>
+        </ul>
       </template>
 
       <template id="historia-escudo" data-tag="Desafio">
@@ -996,6 +947,16 @@
           <li>Tome cuidado com a stamina. Bloquear e atacar consomem a mesma barra, e ficar sem ela abre a guarda.</li>
           <li>Chefes que atravessam escudos (agarrões, magia, fogo) exigem esquiva mesmo assim.</li>
         </ol>
+
+        <h3 class="guia-parte">Escudos recomendados</h3>
+        <ul class="locais">
+          <li><strong>Escudo Perfurante</strong> (10 FOR) — o golpe dele perfura (dano de estocada) e já faz bastante dano no começo do jogo. Vendido por Patches por 3.000 almas, ou cai de Siegward se ele morrer.</li>
+          <li><strong>Escudo dos Dragões Gêmeos</strong> (16 FOR) — grande escudo leve, disponível cedo e muito resistente. Num cadáver perto da fogueira da Fortaleza no Meio do Caminho, na Estrada dos Sacrifícios.</li>
+          <li><strong>Escudo de Cavaleiro de Lothric</strong> (18 FOR) — o melhor escudo médio do começo ao meio do jogo, com estabilidade alta. Cai dos Cavaleiros de Lothric armados com espada.</li>
+          <li><strong>Parma de Pedra</strong> (17 FOR) — escudo médio forte, no Forte de Farron: da primeira fogueira, siga pela esquerda até uma Lesma Podre ao lado de uma árvore.</li>
+          <li><strong>Escudo Grande de Havel</strong> (40 FOR) ou <strong>Escudo Grande de Yhorm</strong> (40 FOR, transposição da alma de Yhorm) — para o fim do jogo. Use infusão <strong>Pesada</strong>, que dá mais dano em troca de um pouco de estabilidade.</li>
+          <li><strong>Escudos de Porta Gigante</strong> (45 FOR, DLC) — par de grandes escudos com muito dano numa build de Força. Nas Ruínas (<em>Dreg Heap</em>), logo depois da fogueira Ruínas do Pico Terroso.</li>
+        </ul>
       </template>
 
       <template id="historia-randomizer" data-tag="Desafio">
@@ -1018,6 +979,12 @@
           <li>Não se apegue a uma build. Use o que aparecer.</li>
           <li>Com inimigos embaralhados, até o Cemitério das Cinzas pode ser mortal. Vá com calma nas primeiras áreas.</li>
         </ol>
+        <h4>Que armas pegar</h4>
+        <ol class="passos">
+          <li>Os itens mudam de lugar a cada seed, então não existe rota fixa. Dê preferência a armas de <strong>requisito baixo</strong> (até uns 12 de Força e Destreza), como Espada Larga, Espada Longa e Maça: você pode usá-las assim que encontrar.</li>
+          <li>Guarde toda a Titanita até achar uma arma boa e invista nela. Infusões que não dependem de atributo, como a <strong>Rústica</strong>, funcionam com qualquer build.</li>
+          <li>Sempre carregue uma arma de reserva com outro tipo de dano (raio, fogo ou mágica). Com os inimigos embaralhados, um chefe resistente pode aparecer em qualquer lugar.</li>
+        </ol>
       </template>
 
       <template id="historia-all-bosses" data-tag="Desafio">
@@ -1039,7 +1006,7 @@
         <h4>As DLCs</h4>
         <ol class="passos">
           <li><strong>Ashes of Ariandel</strong>: fale com Gael na capela da Catedral das Profundezas. Chefes: Campeão Coveiro e seu Lobo, e Irmã Friede.</li>
-          <li><strong>The Ringed City</strong>: acessada pela fogueira do Forno da Primeira Chama. Chefes: Demônio Príncipe, Halflight, Midir e Gael.</li>
+          <li><strong>The Ringed City</strong>: acessada por uma fogueira no Forno da Primeira Chama, antes da Alma das Cinzas, ou pela fogueira da capela de Ariandel, depois de vencer a Irmã Friede. Chefes: Demônio Príncipe, Halflight, Midir e Gael.</li>
         </ol>
         <h4>Cuidado com o final</h4>
         <ol class="passos">
@@ -1047,6 +1014,81 @@
           <li>Tenha a lista de chefes à mão e marque cada um que derrotar.</li>
         </ol>
       </template>
+    </section>
+
+    <!-- ===================== WEB ===================== -->
+    <section class="pagina" id="web" role="tabpanel">
+      <div class="perfil">
+        <div class="perfil-emblema">📜</div>
+        <div>
+          <p class="perfil-rotulo">Capítulo VI</p>
+          <h1>Mensagens de Outros Mundos</h1>
+          <p class="perfil-citacao">"Tente pular... ah, espere."</p>
+        </div>
+      </div>
+
+      <h2 class="secao-titulo">Mensagens recentes</h2>
+      <p class="publicacoes-info" id="publicacoes-info">Carregando…</p>
+      <ul class="publicacoes" id="publicacoes"></ul>
+
+      <h2 class="secao-titulo">Pedras de invocação</h2>
+      <div class="grade">
+        <a class="link-cartao" href="https://darksouls3.wiki.fextralife.com/" target="_blank" rel="noopener">
+          <span class="tag">Wiki</span>
+          <h3>Fextralife Wiki</h3>
+          <p>A enciclopédia mais completa: localização de itens, stats de armas, NPCs, chefes e rotas.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.youtube.com/@VaatiVidya" target="_blank" rel="noopener">
+          <span class="tag">YouTube</span>
+          <h3>VaatiVidya</h3>
+          <p>As famosas análises de lore em "Prepare to Cry". Obrigatório para entender a história escondida nos itens.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.reddit.com/r/darksouls3/" target="_blank" rel="noopener">
+          <span class="tag">Comunidade</span>
+          <h3>r/darksouls3</h3>
+          <p>Subreddit oficial da comunidade: dicas, builds, memes e pedidos de ajuda cooperativa.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.speedrun.com/darksouls3" target="_blank" rel="noopener">
+          <span class="tag">Speedrun</span>
+          <h3>Speedrun.com — DS3</h3>
+          <p>Rankings, categorias (Any%, All Bosses) e guias das rotas mais rápidas do mundo.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.nexusmods.com/darksouls3" target="_blank" rel="noopener">
+          <span class="tag">Mods</span>
+          <h3>Nexus Mods</h3>
+          <p>Mods de texturas, overhauls de gameplay e randomizadores de itens e inimigos.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://store.steampowered.com/app/374320/DARK_SOULS_III/" target="_blank" rel="noopener">
+          <span class="tag">Loja</span>
+          <h3>Dark Souls III na Steam</h3>
+          <p>Página oficial do jogo, com as DLCs, conquistas e avaliações da comunidade.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://store.steampowered.com/news/app/374320" target="_blank" rel="noopener">
+          <span class="tag">Notícias</span>
+          <h3>Notícias da Steam</h3>
+          <p>Patches oficiais e matérias da imprensa sobre Dark Souls III, reunidas pela Steam.</p>
+          <p class="cartao-recente" id="recente-steam" lang="en" hidden></p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://mugenmonkey.com/darksouls3" target="_blank" rel="noopener">
+          <span class="tag">Ferramenta</span>
+          <h3>Mugenmonkey — Planejador de Build</h3>
+          <p>Monte sua build, calcule atributos e compartilhe com amigos antes de gastar suas almas.</p>
+          <span class="seta">Visitar →</span>
+        </a>
+        <a class="link-cartao" href="https://www.youtube.com/results?search_query=dark+souls+3+no+hit+run" target="_blank" rel="noopener">
+          <span class="tag">YouTube</span>
+          <h3>No-Hit Runs</h3>
+          <p>Veja jogadores terminando o jogo sem levar nenhum golpe — pura inspiração (e humilhação).</p>
+          <span class="seta">Visitar →</span>
+        </a>
+      </div>
     </section>
 
     <!-- Janela com a história (Lore) ou o guia (Desafios) de cada card -->
