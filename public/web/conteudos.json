@@ -1,12 +1,33 @@
 {
- "atualizado": "2026-10-08T13:33:04Z",
+ "atualizado": "2026-10-08T23:22:36Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 32min 01s",
+   "u": "https://www.speedrun.com/darksouls3/runs/y9qe71kz",
+   "d": "2026-10-08T14:17:01Z",
+   "a": "Fadis"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Glitchless em 49min 09s",
+   "u": "https://www.speedrun.com/darksouls3/runs/y64g48jm",
+   "d": "2026-10-08T14:02:01Z",
+   "a": "Axxora"
+  },
   {
    "f": "speedrun",
    "t": "Any% Glitchless em 47min 31s",
    "u": "https://www.speedrun.com/darksouls3/runs/y9qe5krz",
    "d": "2026-10-08T10:01:18Z",
    "a": "Gaalloos"
+  },
+  {
+   "f": "reddit",
+   "t": "What is this on my screen?",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1wzzeky/what_is_this_on_my_screen/",
+   "d": "2026-10-07T15:24:07Z",
+   "a": "/u/ProperTemperature410"
   },
   {
    "f": "reddit",
@@ -21,13 +42,6 @@
    "u": "https://www.speedrun.com/darksouls3/runs/y84o641z",
    "d": "2026-10-05T09:00:04Z",
    "a": "lunar_medley"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 45min 26s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y44jqeqy",
-   "d": "2026-10-05T08:32:17Z",
-   "a": "Lawdym"
   },
   {
    "f": "reddit",
@@ -49,20 +63,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1wwlbu0/my_fire_keeper_cosplay/",
    "d": "2026-10-03T11:50:51Z",
    "a": "/u/Dry_Aerie_2215"
-  },
-  {
-   "f": "reddit",
-   "t": "My first digital art: stealing of the first flame",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1wwjufa/my_first_digital_art_stealing_of_the_first_flame/",
-   "d": "2026-10-03T10:22:16Z",
-   "a": "/u/suvojit1999"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 32min 54s",
-   "u": "https://www.speedrun.com/darksouls3/runs/yogqnn7m",
-   "d": "2026-10-03T03:08:25Z",
-   "a": "DomenicoBraSaS"
   },
   {
    "f": "reddit",
