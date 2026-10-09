@@ -1,26 +1,33 @@
 {
- "atualizado": "2026-10-08T23:22:36Z",
+ "atualizado": "2026-10-09T13:20:06Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Glitchless em 1h 00min 25s",
+   "u": "https://www.speedrun.com/darksouls3/runs/z1469ngz",
+   "d": "2026-10-09T07:41:59Z",
+   "a": "Vahrajka"
+  },
+  {
+   "f": "speedrun",
+   "t": "All Bosses em 1h 14min 08s",
+   "u": "https://www.speedrun.com/darksouls3/runs/m74lw5wm",
+   "d": "2026-10-09T07:24:40Z",
+   "a": "HarumiEna"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Current Patch em 30min 56s",
+   "u": "https://www.speedrun.com/darksouls3/runs/y84gwqxz",
+   "d": "2026-10-09T06:22:17Z",
+   "a": "olzku23"
+  },
   {
    "f": "speedrun",
    "t": "Any% Restricted em 32min 01s",
    "u": "https://www.speedrun.com/darksouls3/runs/y9qe71kz",
    "d": "2026-10-08T14:17:01Z",
    "a": "Fadis"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Glitchless em 49min 09s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y64g48jm",
-   "d": "2026-10-08T14:02:01Z",
-   "a": "Axxora"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Glitchless em 47min 31s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y9qe5krz",
-   "d": "2026-10-08T10:01:18Z",
-   "a": "Gaalloos"
   },
   {
    "f": "reddit",
@@ -35,13 +42,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1wyo3qi/struggling_with_friede_just_crouch/",
    "d": "2026-10-05T23:54:19Z",
    "a": "/u/JaitorWUT"
-  },
-  {
-   "f": "speedrun",
-   "t": "All Bosses em 1h 08min 42s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y84o641z",
-   "d": "2026-10-05T09:00:04Z",
-   "a": "lunar_medley"
   },
   {
    "f": "reddit",
