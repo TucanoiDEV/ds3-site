@@ -1,6 +1,13 @@
 {
- "atualizado": "2026-10-10T05:55:42Z",
+ "atualizado": "2026-10-10T12:34:36Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 33min 36s",
+   "u": "https://www.speedrun.com/darksouls3/runs/yvk7d8xm",
+   "d": "2026-10-10T12:05:07Z",
+   "a": "Little_Evil2"
+  },
   {
    "f": "speedrun",
    "t": "Any% Glitchless em 1h 00min 25s",
@@ -21,13 +28,6 @@
    "u": "https://www.speedrun.com/darksouls3/runs/y84gwqxz",
    "d": "2026-10-09T06:22:17Z",
    "a": "olzku23"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 32min 01s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y9qe71kz",
-   "d": "2026-10-08T14:17:01Z",
-   "a": "Fadis"
   },
   {
    "f": "reddit",
@@ -59,17 +59,17 @@
   },
   {
    "f": "reddit",
+   "t": "After 2 hours of grinding the armor set and this happens...",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1wxpvry/after_2_hours_of_grinding_the_armor_set_and_this/",
+   "d": "2026-10-04T20:35:28Z",
+   "a": "/u/BooperDooper71"
+  },
+  {
+   "f": "reddit",
    "t": "Beat Twin Princes for the first time. Sweating like a mf",
    "u": "https://www.reddit.com/r/darksouls3/comments/1wwxehz/beat_twin_princes_for_the_first_time_sweating/",
    "d": "2026-10-03T20:39:15Z",
    "a": "/u/Prior-Wealth-3315"
-  },
-  {
-   "f": "reddit",
-   "t": "My Fire Keeper cosplay",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1wwlbu0/my_fire_keeper_cosplay/",
-   "d": "2026-10-03T11:50:51Z",
-   "a": "/u/Dry_Aerie_2215"
   },
   {
    "f": "steam",
