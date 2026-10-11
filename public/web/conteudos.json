@@ -1,6 +1,13 @@
 {
- "atualizado": "2026-10-11T05:50:00Z",
+ "atualizado": "2026-10-11T12:52:57Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "All Bosses em 1h 11min 10s",
+   "u": "https://www.speedrun.com/darksouls3/runs/m34vkv4z",
+   "d": "2026-10-11T10:46:27Z",
+   "a": "lingRen"
+  },
   {
    "f": "speedrun",
    "t": "Any% Restricted em 33min 36s",
@@ -35,13 +42,6 @@
    "u": "https://www.speedrun.com/darksouls3/runs/m74lw5wm",
    "d": "2026-10-09T07:24:40Z",
    "a": "HarumiEna"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Current Patch em 30min 56s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y84gwqxz",
-   "d": "2026-10-09T06:22:17Z",
-   "a": "olzku23"
   },
   {
    "f": "reddit",
