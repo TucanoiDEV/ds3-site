@@ -1,6 +1,13 @@
 {
- "atualizado": "2026-10-17T04:29:43Z",
+ "atualizado": "2026-10-17T15:37:08Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Glitchless em 42min 54s",
+   "u": "https://www.speedrun.com/darksouls3/runs/m342kj4z",
+   "d": "2026-10-17T11:34:01Z",
+   "a": "g_aim_over"
+  },
   {
    "f": "reddit",
    "t": "My nameless king oil painting",
@@ -31,6 +38,13 @@
   },
   {
    "f": "reddit",
+   "t": "Which game in the Dark Souls trilogy is your favorite? 👀",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1x7ivi7/which_game_in_the_dark_souls_trilogy_is_your/",
+   "d": "2026-10-16T15:13:44Z",
+   "a": "/u/No-Dot-8906"
+  },
+  {
+   "f": "reddit",
    "t": "I'm still surprised that even this game was released 10 years ago it still has an active player base",
    "u": "https://www.reddit.com/r/darksouls3/comments/1x6etk0/im_still_surprised_that_even_this_game_was/",
    "d": "2026-10-15T07:00:59Z",
@@ -42,13 +56,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1x69qqb/id_probably_hit_a_lil_dance_too_after_this_level/",
    "d": "2026-10-15T02:12:34Z",
    "a": "/u/Hacked-Braincells"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 32min 01s",
-   "u": "https://www.speedrun.com/darksouls3/runs/zg09w3nm",
-   "d": "2026-10-14T16:28:56Z",
-   "a": "Moochyy_"
   },
   {
    "f": "reddit",
@@ -63,13 +70,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1x3o4sd/spotted_in_kyoto/",
    "d": "2026-10-12T00:40:09Z",
    "a": "/u/Suspicious-Can-3776"
-  },
-  {
-   "f": "reddit",
-   "t": "Still the most beautiful view in FS games.",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1x3jbqe/still_the_most_beautiful_view_in_fs_games/",
-   "d": "2026-10-11T20:58:03Z",
-   "a": "/u/kocham_wydajac"
   },
   {
    "f": "steam",
