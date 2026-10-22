@@ -1,6 +1,20 @@
 {
- "atualizado": "2026-10-21T11:51:54Z",
+ "atualizado": "2026-10-22T04:50:39Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% em 30min 02s",
+   "u": "https://www.speedrun.com/darksouls3/runs/zqon4r5y",
+   "d": "2026-10-22T03:17:00Z",
+   "a": "Kurenaii"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 33min 22s",
+   "u": "https://www.speedrun.com/darksouls3/runs/z546qonm",
+   "d": "2026-10-22T02:52:35Z",
+   "a": "Little_Evil2"
+  },
   {
    "f": "speedrun",
    "t": "Any% Glitchless em 45min 46s",
@@ -16,18 +30,11 @@
    "a": "Moonlight_23"
   },
   {
-   "f": "speedrun",
-   "t": "All Bosses Glitchless em 1h 22min 16s",
-   "u": "https://www.speedrun.com/darksouls3/runs/mrpwq04z",
-   "d": "2026-10-20T10:29:24Z",
-   "a": "koksutle"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Glitchless em 46min 15s",
-   "u": "https://www.speedrun.com/darksouls3/runs/y648490m",
-   "d": "2026-10-19T19:04:36Z",
-   "a": "Cranks1natra"
+   "f": "reddit",
+   "t": "A bountiful farming harvest",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1xagk5t/a_bountiful_farming_harvest/",
+   "d": "2026-10-20T02:39:04Z",
+   "a": "/u/lufraf"
   },
   {
    "f": "reddit",
@@ -63,13 +70,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1x6etk0/im_still_surprised_that_even_this_game_was/",
    "d": "2026-10-15T07:00:59Z",
    "a": "/u/Iden_Stramp"
-  },
-  {
-   "f": "reddit",
-   "t": "I'd probably hit a lil dance too after this level of humiliation",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1x69qqb/id_probably_hit_a_lil_dance_too_after_this_level/",
-   "d": "2026-10-15T02:12:34Z",
-   "a": "/u/Hacked-Braincells"
   },
   {
    "f": "steam",
