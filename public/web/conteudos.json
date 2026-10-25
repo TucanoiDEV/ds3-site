@@ -1,6 +1,20 @@
 {
- "atualizado": "2026-10-25T11:33:23Z",
+ "atualizado": "2026-10-25T16:23:44Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 40min 23s",
+   "u": "https://www.speedrun.com/darksouls3/runs/zg01jx0m",
+   "d": "2026-10-25T13:40:37Z",
+   "a": "Sijix"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 46min 56s",
+   "u": "https://www.speedrun.com/darksouls3/runs/zqon015y",
+   "d": "2026-10-25T12:53:36Z",
+   "a": "LawLessLeVrai"
+  },
   {
    "f": "speedrun",
    "t": "All Bosses Glitchless em 1h 17min 51s",
@@ -14,20 +28,6 @@
    "u": "https://www.speedrun.com/darksouls3/runs/yw7opppz",
    "d": "2026-10-25T10:14:05Z",
    "a": "Castor1ce"
-  },
-  {
-   "f": "speedrun",
-   "t": "All Bosses em 1h 19min 33s",
-   "u": "https://www.speedrun.com/darksouls3/runs/zpev8nny",
-   "d": "2026-10-23T17:06:18Z",
-   "a": "gonejf"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Glitchless em 1h 35min 42s",
-   "u": "https://www.speedrun.com/darksouls3/runs/ydxp3dvz",
-   "d": "2026-10-22T15:52:19Z",
-   "a": "soomin76"
   },
   {
    "f": "reddit",
@@ -52,6 +52,13 @@
   },
   {
    "f": "reddit",
+   "t": "Saw this while looking for draksouls skins",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1xaztcv/saw_this_while_looking_for_draksouls_skins/",
+   "d": "2026-10-20T18:19:02Z",
+   "a": "/u/BigBoomer_"
+  },
+  {
+   "f": "reddit",
    "t": "Handmade fallen Knight cos.",
    "u": "https://www.reddit.com/r/darksouls3/comments/1xayddh/handmade_fallen_knight_cos/",
    "d": "2026-10-20T17:26:26Z",
@@ -63,13 +70,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1xagk5t/a_bountiful_farming_harvest/",
    "d": "2026-10-20T02:39:04Z",
    "a": "/u/lufraf"
-  },
-  {
-   "f": "reddit",
-   "t": "I made a bonfire replica for a local convention",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1x94udp/i_made_a_bonfire_replica_for_a_local_convention/",
-   "d": "2026-10-18T14:40:06Z",
-   "a": "/u/drkjs"
   },
   {
    "f": "steam",
