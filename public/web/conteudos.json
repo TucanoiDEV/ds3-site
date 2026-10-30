@@ -1,6 +1,21 @@
 {
- "atualizado": "2026-10-30T05:52:15Z",
+ "atualizado": "2026-10-30T12:58:05Z",
  "itens": [
+  {
+   "f": "steam",
+   "t": "Серверы Dark Souls 2 и Dark Souls 3 внезапно отключили на всех платформах",
+   "u": "https://steamstore-a.akamaihd.net/news/externalpost/PlayGround.ru%20-%20%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0/1847920302238068",
+   "d": "2026-10-30T10:49:46Z",
+   "a": "PlayGround.ru - официальная группа",
+   "r": "FromSoftware временно отключила серверы Dark Souls 2 и Dark Souls 3. Разработчики сообщили, что обнаружили техническую проблему, из-за которой решили приостановить работу сетевых…"
+  },
+  {
+   "f": "reddit",
+   "t": "Servers going down for 2 and 3",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1xja3h2/servers_going_down_for_2_and_3/",
+   "d": "2026-10-30T08:49:06Z",
+   "a": "/u/Busty-Patches"
+  },
   {
    "f": "speedrun",
    "t": "Any% Restricted em 31min 58s",
@@ -65,13 +80,6 @@
    "a": "LawLessLeVrai"
   },
   {
-   "f": "reddit",
-   "t": "Why dark souls 3 is the best game",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1xe8ckh/why_dark_souls_3_is_the_best_game/",
-   "d": "2026-10-24T13:13:45Z",
-   "a": "/u/John_Nightreigh"
-  },
-  {
    "f": "steam",
    "t": "A new Dark Souls 3 lighting tool is giving modders the power to make next-gen facelifts of the FromSoft classic",
    "u": "https://steamstore-a.akamaihd.net/news/externalpost/PC%20Gamer/1805065414312971",
@@ -102,14 +110,6 @@
    "d": "2025-02-25T10:12:41Z",
    "a": "VG247",
    "r": "Ahead of Elden Ring Nightreign giving you a chance to battle through some bosses with friends in a few months' time, the uber popular mod that brought that kind of multiplayer to…"
-  },
-  {
-   "f": "steam",
-   "t": "The Nameless King and older Souls bosses will show up in Elden Ring Nightreign for exactly the reasons you think",
-   "u": "https://steamstore-a.akamaihd.net/news/externalpost/VG247/1791580425959622",
-   "d": "2025-02-13T10:16:46Z",
-   "a": "VG247",
-   "r": "Elden Ring Nightreign is quickly becoming one of the year’s most anticipated games, and with good reason. But it also represents an entirely new type of game for developer…"
   }
  ]
 }
