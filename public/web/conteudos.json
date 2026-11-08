@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-07T13:04:34Z",
+ "atualizado": "2026-11-08T06:04:40Z",
  "itens": [
   {
    "f": "speedrun",
@@ -51,6 +51,13 @@
    "a": "/u/silentflail"
   },
   {
+   "f": "reddit",
+   "t": "Which weapon is the best across all games?",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1xl5jue/which_weapon_is_the_best_across_all_games/",
+   "d": "2026-11-01T15:14:48Z",
+   "a": "/u/LosinForABruisin"
+  },
+  {
    "f": "speedrun",
    "t": "Any% Glitchless em 45min 37s",
    "u": "https://www.speedrun.com/darksouls3/runs/mknx65lm",
@@ -63,13 +70,6 @@
    "u": "https://www.speedrun.com/darksouls3/runs/z044439y",
    "d": "2026-11-01T10:23:09Z",
    "a": "Little_Screen_"
-  },
-  {
-   "f": "reddit",
-   "t": "Was playing for the first time and am unsure if this is normal.",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1xkv3ib/was_playing_for_the_first_time_and_am_unsure_if/",
-   "d": "2026-11-01T05:31:42Z",
-   "a": "/u/Fine_Box_9482"
   },
   {
    "f": "steam",
