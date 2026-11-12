@@ -1,19 +1,48 @@
 {
- "atualizado": "2026-11-12T07:14:36Z",
+ "atualizado": "2026-11-12T19:56:00Z",
  "itens": [
+  {
+   "f": "speedrun",
+   "t": "Any% Current Patch em 32min 32s",
+   "u": "https://www.speedrun.com/darksouls3/runs/zg04reem",
+   "d": "2026-11-12T17:15:58Z",
+   "a": "0pinel"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 36min 45s",
+   "u": "https://www.speedrun.com/darksouls3/runs/ydxk04qz",
+   "d": "2026-11-12T15:53:37Z",
+   "a": "Flaykxs"
+  },
+  {
+   "f": "speedrun",
+   "t": "Any% Restricted em 35min 20s",
+   "u": "https://www.speedrun.com/darksouls3/runs/z04v979y",
+   "d": "2026-11-12T14:53:39Z",
+   "a": "Ded_Griie"
+  },
+  {
+   "f": "reddit",
+   "t": "Working on my Sister Friede Cosplay, Scythe WIP.",
+   "u": "https://www.reddit.com/r/darksouls3/comments/1xudtz8/working_on_my_sister_friede_cosplay_scythe_wip/",
+   "d": "2026-11-12T14:14:16Z",
+   "a": "/u/vilebloodless"
+  },
+  {
+   "f": "steam",
+   "t": "From Software наконец-то вернула онлайн в Dark Souls 2 и Dark Souls 3 - причина сбоя остается тайной",
+   "u": "https://steamstore-a.akamaihd.net/news/externalpost/PlayGround.ru%20-%20%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0/1849192144181991",
+   "d": "2026-11-12T08:09:31Z",
+   "a": "PlayGround.ru - официальная группа",
+   "r": "Студия FromSoftware наконец-то восстановила работу всех онлайн функций в Dark Souls 2 и Dark Souls 3 на всех ПК и консолях. Мультиплеер обеих игр был полностью недоступен почти…"
+  },
   {
    "f": "speedrun",
    "t": "All Bosses (SL1) em 1h 18min 41s",
    "u": "https://www.speedrun.com/darksouls3/runs/z54qwwnm",
    "d": "2026-11-10T11:05:51Z",
    "a": "olzku23"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 35min 32s",
-   "u": "https://www.speedrun.com/darksouls3/runs/yw7935nz",
-   "d": "2026-11-10T10:32:01Z",
-   "a": "lingRen"
   },
   {
    "f": "reddit",
@@ -28,13 +57,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1xryhy2/some_photos_of_my_fallen_knight_cosplay/",
    "d": "2026-11-09T17:51:24Z",
    "a": "/u/lorkox"
-  },
-  {
-   "f": "speedrun",
-   "t": "All Bosses em 1h 07min 58s",
-   "u": "https://www.speedrun.com/darksouls3/runs/zxr1k6ez",
-   "d": "2026-11-09T11:44:11Z",
-   "a": "lunar_medley"
   },
   {
    "f": "reddit",
@@ -56,20 +78,6 @@
    "u": "https://www.reddit.com/r/darksouls3/comments/1xpflh7/i_remade_the_whole_happy_souls_in_3d_on_my/",
    "d": "2026-11-06T15:28:00Z",
    "a": "/u/DiabloDex1"
-  },
-  {
-   "f": "reddit",
-   "t": "Saint of the Deep - Art by me!",
-   "u": "https://www.reddit.com/r/darksouls3/comments/1xof4na/saint_of_the_deep_art_by_me/",
-   "d": "2026-11-05T10:17:23Z",
-   "a": "/u/Halberick"
-  },
-  {
-   "f": "speedrun",
-   "t": "Any% Restricted em 37min 30s",
-   "u": "https://www.speedrun.com/darksouls3/runs/yvkkdlem",
-   "d": "2026-11-04T13:45:52Z",
-   "a": "Flaykxs"
   },
   {
    "f": "steam",
@@ -102,14 +110,6 @@
    "d": "2025-02-25T10:18:22Z",
    "a": "PCGamesN",
    "r": "Elden Ring Nightreign might be a major revamp of FromSofware's soulslike multiplayer experience, but it's actually a careful evolution of a system the studio has been refining for…"
-  },
-  {
-   "f": "steam",
-   "t": "Elden Ring's uber-popular seamless co-op mod now has a Dark Souls 3 version, in case those Nightreign network tests haven't been enough to tide you over til release",
-   "u": "https://steamstore-a.akamaihd.net/news/externalpost/VG247/1792116353352597",
-   "d": "2025-02-25T10:12:41Z",
-   "a": "VG247",
-   "r": "Ahead of Elden Ring Nightreign giving you a chance to battle through some bosses with friends in a few months' time, the uber popular mod that brought that kind of multiplayer to…"
   }
  ]
 }
